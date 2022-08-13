@@ -17,6 +17,20 @@ namespace AikidoSystem.UI
         private int borderRadius = 0;
         private Color borderColor = Color.PaleVioletRed;
 
+        public int BorderSize { get => borderSize; set =>  borderSize = value;  }
+        public int BorderRadius { get => borderRadius; set => borderRadius = value; }
+        public Color BorderColor { get => borderColor; set => borderColor = value; }
+
+        public Color BackgroundColor
+        {
+            get { return this.BackColor; }
+            set { this.BackColor = value; }
+        }
+        public Color TextColor
+        {
+            get { return this.ForeColor; }
+            set { this.ForeColor = value; }
+        }
         public Button_M()
         {
             this.FlatStyle = FlatStyle.Flat;
