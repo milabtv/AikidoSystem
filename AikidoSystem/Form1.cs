@@ -31,5 +31,10 @@ namespace AikidoSystem
         {
 
         }
+
+        private void toggle1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace AikidoSystem.UI
         private int borderSize = 0;
 
         private bool droppedDown = false;
-        private Image calendarIcon = Properties.Resources.calendarWhite;
+        private Image calendarIcon = Properties.Resources.calendarWHITE;
         private RectangleF iconButttonArea;
         private const int calendarIconWidth = 34;
         private const int arrowIconWidth = 17;
@@ -27,8 +27,8 @@ namespace AikidoSystem.UI
             set {
                 skinColor = value;
                 if(skinColor.GetBrightness()>=0.8F)
-                    calendarIcon = Properties.Resources.calendarDark;
-                else calendarIcon = Properties.Resources.calendarWhite;
+                    calendarIcon = Properties.Resources.calendarBLACK;
+                else calendarIcon = Properties.Resources.calendarWHITE;
                 this.Invalidate();
 
             } }
@@ -83,6 +83,7 @@ namespace AikidoSystem.UI
 
         protected override void OnHandleCreated(EventArgs e)
         {
+
             base.OnHandleCreated(e);
             int iconWidth = GetIconButtonWidth();
             iconButttonArea = new RectangleF(this.Width-iconWidth,0,iconWidth,this.Height);       

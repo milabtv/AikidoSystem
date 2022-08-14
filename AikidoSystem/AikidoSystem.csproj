@@ -57,8 +57,20 @@
     <Compile Include="UI\Button_M.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\ComboBox_M.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UI\DateTimePicker_M.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\RadioButton_M.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\TextBox_M.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\TextBox_M.Designer.cs">
+      <DependentUpon>TextBox_M.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ToggleButton_M.cs">
       <SubType>Component</SubType>
@@ -76,6 +88,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\TextBox_M.resx">
+      <DependentUpon>TextBox_M.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,10 +105,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\calendarWhite.png" />
+    <None Include="calendarBLACK.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\calendarDark.png" />
+    <None Include="Resources\calendarBLACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="calendarWHITE.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

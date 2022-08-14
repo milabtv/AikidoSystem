@@ -63,9 +63,9 @@ namespace AikidoSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap calendarDark {
+        internal static System.Drawing.Bitmap calendarBLACK {
             get {
-                object obj = ResourceManager.GetObject("calendarDark", resourceCulture);
+                object obj = ResourceManager.GetObject("calendarBLACK", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace AikidoSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap calendarWhite {
+        internal static System.Drawing.Bitmap calendarWHITE {
             get {
-                object obj = ResourceManager.GetObject("calendarWhite", resourceCulture);
+                object obj = ResourceManager.GetObject("calendarWHITE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
