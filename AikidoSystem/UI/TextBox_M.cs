@@ -33,13 +33,13 @@ namespace AikidoSystem.UI
 
         }
         public event EventHandler _TextChanged;
-        public Color BorderColor 
-        { 
-            get => borderColor; 
-            set { borderColor = value;this.Invalidate(); } 
+        public Color BorderColor
+        {
+            get => borderColor;
+            set { borderColor = value; this.Invalidate(); }
         }
 
-        public int BorderSize 
+        public int BorderSize
         {
             get => borderSize;
             set
@@ -52,20 +52,20 @@ namespace AikidoSystem.UI
             }
         }
 
-        public bool UnderlinedStyle 
-        { 
-            get => underlinedStyle; 
-            set { underlinedStyle = value; this.Invalidate(); } 
+        public bool UnderlinedStyle
+        {
+            get => underlinedStyle;
+            set { underlinedStyle = value; this.Invalidate(); }
         }
 
         public bool PasswordChar
         {
             get => isPasswordChar;
-            set 
-            { 
+            set
+            {
                 isPasswordChar = value;
-                if(!isPlaceholder)
-                    textBox1.UseSystemPasswordChar = value; 
+                if (!isPlaceholder)
+                    textBox1.UseSystemPasswordChar = value;
             }
         }
         public bool Multiline
@@ -73,11 +73,11 @@ namespace AikidoSystem.UI
             get => textBox1.Multiline;
             set => textBox1.Multiline = value;
         }
-        public override Color BackColor 
-        { 
+        public override Color BackColor
+        {
             get => base.BackColor;
-            set 
-            { 
+            set
+            {
                 base.BackColor = value;
                 textBox1.BackColor = value;
             }
@@ -117,14 +117,14 @@ namespace AikidoSystem.UI
             }
         }
 
-        
-        public Color BorderFocusColor 
-        { 
+
+        public Color BorderFocusColor
+        {
             get => borderFocusColor;
-            set => borderFocusColor = value; 
+            set => borderFocusColor = value;
         }
-        public int BorderRadius 
-        { 
+        public int BorderRadius
+        {
             get => borderRadius;
             set
             {
@@ -136,8 +136,8 @@ namespace AikidoSystem.UI
             }
         }
 
-        public Color PlaceholderColor 
-        { 
+        public Color PlaceholderColor
+        {
             get => placeholderColor;
             set
             {
@@ -147,8 +147,8 @@ namespace AikidoSystem.UI
             }
         }
 
-        public string PlaceholderText 
-        { 
+        public string PlaceholderText
+        {
             get => placeholderText;
             set
             {
@@ -158,7 +158,7 @@ namespace AikidoSystem.UI
             }
         }
 
-           
+
 
         protected override void OnResize(EventArgs e)
         {
@@ -182,7 +182,7 @@ namespace AikidoSystem.UI
                 var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
                 int smoothSize = borderSize > 0 ? borderSize : 1;
 
-                using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth,borderRadius))
+                using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
                 using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
                 using (Pen penBorderSmooth = new Pen(this.Parent.BackColor, smoothSize))
                 using (Pen penBorder = new Pen(borderColor, borderSize))
@@ -190,10 +190,10 @@ namespace AikidoSystem.UI
 
                     this.Region = new Region(pathBorderSmooth);
                     if (borderRadius > 15) SetTextBoxRoundedRegion();
-                    graph.SmoothingMode= SmoothingMode.AntiAlias;
+                    graph.SmoothingMode = SmoothingMode.AntiAlias;
                     penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
 
-                    if (isFocused)penBorder.Color = borderFocusColor;
+                    if (isFocused) penBorder.Color = borderFocusColor;
 
                     if (underlinedStyle)
                     {
@@ -202,14 +202,14 @@ namespace AikidoSystem.UI
                         graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
                     }
                     else
-                    { 
+                    {
                         graph.DrawPath(penBorderSmooth, pathBorderSmooth);
-                        graph.DrawPath(penBorder,pathBorder);
-                    }   
-                    
+                        graph.DrawPath(penBorder, pathBorder);
+                    }
+
                 }
             }
-            else 
+            else
             {
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
@@ -249,7 +249,7 @@ namespace AikidoSystem.UI
                 if (isPasswordChar)
                     textBox1.UseSystemPasswordChar = true;
             }
-        } 
+        }
 
         private void SetTextBoxRoundedRegion()
         {
@@ -259,9 +259,9 @@ namespace AikidoSystem.UI
                 pathTxt = GetFigurePath(textBox1.ClientRectangle, borderRadius - borderSize);
                 textBox1.Region = new Region(pathTxt);
             }
-            else 
+            else
             {
-                pathTxt = GetFigurePath(textBox1.ClientRectangle,borderSize*2);
+                pathTxt = GetFigurePath(textBox1.ClientRectangle, borderSize * 2);
                 textBox1.Region = new Region(pathTxt);
             }
             pathTxt.Dispose();
@@ -276,20 +276,20 @@ namespace AikidoSystem.UI
             path.AddArc(rect.Width - radius, rect.Height - radius, radius, radius, 0, 90);
             path.AddArc(rect.X, rect.Height - radius, radius, radius, 90, 90);
             path.CloseFigure();
-            return path; 
+            return path;
         }
         private void UpdateControlHeight()
         {
             if (textBox1.Multiline == false)
             {
-                int txtHeight = TextRenderer.MeasureText("Text",this.Font).Height+1;
+                int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height + 1;
                 textBox1.Multiline = true;
-                textBox1.MinimumSize = new Size(0,txtHeight);
+                textBox1.MinimumSize = new Size(0, txtHeight);
                 textBox1.Multiline = false;
 
                 this.Height = textBox1.Height + this.Padding.Top + this.Padding.Bottom;
 
-            }    
+            }
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -297,10 +297,7 @@ namespace AikidoSystem.UI
                 _TextChanged.Invoke(sender, e);
         }
 
-        private void TextBox_M_MouseEnter(object sender, EventArgs e)
-        {
-            this.OnMouseEnter(e);
-        }
+        
 
         private void textBox1_MouseLeave(object sender, EventArgs e)
         {
@@ -326,9 +323,14 @@ namespace AikidoSystem.UI
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            isFocused=false;
+            isFocused = false;
             this.Invalidate();
             SetPlaceHolder();
+        }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+            this.OnMouseEnter(e);
         }
     }
 }

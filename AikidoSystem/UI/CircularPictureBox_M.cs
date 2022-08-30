@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace AikidoSystem.UI
 {
-    class CircularPictureBox_M : PictureBox
+    public class CircularPictureBox_M : PictureBox
     {
         private int borderSize = 2;
         private Color borderColor = Color.RoyalBlue;

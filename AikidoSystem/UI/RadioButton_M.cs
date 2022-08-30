@@ -10,8 +10,7 @@ using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
 namespace AikidoSystem.UI
-{
-    internal class RadioButton_M :RadioButton
+{public class RadioButton_M :RadioButton
     {
         private Color checkedColor = Color.MediumSlateBlue;
         private Color uncheckedColor = Color.Gray;
