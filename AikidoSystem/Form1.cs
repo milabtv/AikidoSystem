@@ -14,7 +14,7 @@ namespace AikidoSystem
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,6 +33,11 @@ namespace AikidoSystem
         }
 
         private void toggle1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_M1_OnSelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -57,12 +57,20 @@
     <Compile Include="UI\Button_M.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\CircularPictureBox_M.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\ComboBox_M.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\DateTimePicker_M.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\DropDownMenu_M.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\MenuColorTable.cs" />
+    <Compile Include="UI\MenuRender.cs" />
     <Compile Include="UI\RadioButton_M.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -8,15 +8,16 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
+using System.Drawing.Design;
 
 namespace AikidoSystem.UI
 {
     [DefaultEvent("OnSelectedIndexChanged")]
-    public class ComboBox_M:UserControl
+    public class ComboBox_M : UserControl
     {
         private Color backColor = Color.WhiteSmoke;
         private Color iconColor = Color.MediumSlateBlue;
-        private Color listBackColor = Color.FromArgb(230,228,245);
+        private Color listBackColor = Color.FromArgb(230, 228, 245);
         private Color listTextColor = Color.DimGray;
         private Color borderColor = Color.MediumSlateBlue;
         private int borderSize = 1;
@@ -24,6 +25,163 @@ namespace AikidoSystem.UI
         private ComboBox cmbList;
         private Label lblText;
         private Button btnIcon;
+
+        public new Color BackColor
+        {
+            get => backColor;
+            set
+            {
+                backColor = value;
+                lblText.BackColor = backColor;
+                btnIcon.BackColor = backColor;
+            }
+        }
+        public Color IconColor
+        {
+            get => iconColor;
+            set
+            {
+                iconColor = value;
+                btnIcon.Invalidate();
+            }
+        }
+        public Color ListBackColor
+        {
+            get => listBackColor;
+            set {
+                listBackColor = value;
+                cmbList.BackColor = listBackColor;
+            }
+        }
+        public Color ListTextColor
+        {
+            get => listTextColor;
+            set
+            {
+                listTextColor = value;
+                cmbList.ForeColor = listTextColor;
+            }
+        }
+        public Color BorderColor
+        {
+            get => borderColor;
+            set {
+                borderColor = value;
+                base.BackColor = borderColor;
+            }
+        }
+        public int BorderSize
+        {
+            get => borderSize;
+            set {
+                borderSize = value;
+                this.Padding = new Padding(BorderSize);
+                AdjustComboBoxDimentions();
+            }
+        }
+        public override Color ForeColor
+        {
+            get => base.ForeColor;
+            set
+            {
+                base.ForeColor = value;
+                lblText.ForeColor = value;
+            }
+        }
+        public override Font Font
+        {
+            get => base.Font;
+            set
+            {
+                base.Font = value;
+                lblText.Font = value;
+                cmbList.Font = value;
+            }
+        }
+
+        public string Texts
+        {
+            get => lblText.Text;
+            set => lblText.Text = value;
+        }
+
+        public ComboBoxStyle DropDownStyle
+        {
+            get => cmbList.DropDownStyle;
+            set 
+            {
+                if (cmbList.DropDownStyle != ComboBoxStyle.Simple)
+                    cmbList.DropDownStyle = value;
+            }
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        [Localizable(true)]
+        
+        [Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
+        [MergableProperty(false)]
+        public ComboBox.ObjectCollection Items
+        {
+            get => cmbList.Items;
+        }
+
+       
+        [DefaultValue(null)]
+        [RefreshProperties(RefreshProperties.Repaint)]
+        [AttributeProvider(typeof(IListSource))]
+        
+        public new object DataSource
+        {
+            get=>cmbList.DataSource;
+            set=>cmbList.DataSource = value;
+        }
+
+        [DefaultValue(AutoCompleteMode.None)]
+        [Browsable(true)]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        public AutoCompleteMode AutoCompleteMode
+        {
+            get => cmbList.AutoCompleteMode;
+            set => cmbList.AutoCompleteMode = value;
+        }
+
+        [DefaultValue(AutoCompleteSource.None)]
+        [Browsable(true)]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        public AutoCompleteSource AutoCompleteSource
+        {
+            get=> cmbList.AutoCompleteSource;
+            set=> cmbList.AutoCompleteSource=value;
+        }
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+        [Localizable(true)]
+        [Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
+        [Browsable(true)]
+        [EditorBrowsable(EditorBrowsableState.Always)]
+        public AutoCompleteStringCollection AutoCompleteCustomSource
+        {
+            get => cmbList.AutoCompleteCustomSource;
+            set => cmbList.AutoCompleteCustomSource = value;
+        }
+
+        [Browsable(false)]
+        [Bindable(true)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public object SelectedItem
+        {
+            get=>cmbList.SelectedItem;
+            set=>cmbList.SelectedItem = value;
+        }
+
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+
+        public int SelectedIndex
+        {
+            get => cmbList.SelectedIndex;
+            set =>cmbList.SelectedIndex = value;
+        }
 
         public event EventHandler OnSelectedIndexChanged;
 
@@ -34,7 +192,7 @@ namespace AikidoSystem.UI
             btnIcon = new Button();
             this.SuspendLayout();
 
-            cmbList.BackColor = backColor;
+            cmbList.BackColor = listBackColor;
             cmbList.Font = new Font(this.Font.Name,10F);
             cmbList.ForeColor = listTextColor;
             cmbList.SelectedIndexChanged += new EventHandler(Combobox_SelectedIndexChanged);
