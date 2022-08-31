@@ -11,10 +11,16 @@ using System.Windows.Forms;
 
 namespace AikidoSystem
 {
-    public partial class Main : Form
+    public partial class LoginForm : Form
     {
+        
+        private void button_M1_MouseHover(object sender, EventArgs e)
+        {
+            button_M1.BackColor = Color.RoyalBlue;
+        }
+
         private int borderSize = 4;
-        public Main()
+        public LoginForm()
         {
             InitializeComponent();
             this.Padding = new Padding(borderSize);
@@ -26,18 +32,14 @@ namespace AikidoSystem
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112,0xf012,0);
-        }
+
         protected override void WndProc(ref Message m)
         {
             const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window
             const int WM_NCHITTEST = 0x0084;//Win32, Mouse Input Notification: Determine what part of the window corresponds to a point, allows to resize the form.
             const int resizeAreaSize = 10;
-            
-            
+
+
             const int HTCLIENT = 1; //Represents the client area of the window
             const int HTLEFT = 10;  //Left border of a window, allows resize horizontally to the left
             const int HTRIGHT = 11; //Right border of a window, allows resize horizontally to the right
@@ -48,24 +50,24 @@ namespace AikidoSystem
             const int HTBOTTOMLEFT = 16;//Lower-left corner of a window border, allows resize diagonally to the left
             const int HTBOTTOMRIGHT = 17;//Lower-right corner of a window border, allows resize diagonally to the right
             if (m.Msg == WM_NCHITTEST)
-            { 
+            {
                 base.WndProc(ref m);
                 if (this.WindowState == FormWindowState.Normal)
                 {
                     if ((int)m.Result == HTCLIENT)
                     {
-                        Point screenPoint = new Point(m.LParam.ToInt32()); 
-                        Point clientPoint = this.PointToClient(screenPoint); 
+                        Point screenPoint = new Point(m.LParam.ToInt32());
+                        Point clientPoint = this.PointToClient(screenPoint);
                         if (clientPoint.Y <= resizeAreaSize)
                         {
-                            if (clientPoint.X <= resizeAreaSize) 
-                                m.Result = (IntPtr)HTTOPLEFT; 
+                            if (clientPoint.X <= resizeAreaSize)
+                                m.Result = (IntPtr)HTTOPLEFT;
                             else if (clientPoint.X < (this.Size.Width - resizeAreaSize))
-                                m.Result = (IntPtr)HTTOP; 
-                            else 
+                                m.Result = (IntPtr)HTTOP;
+                            else
                                 m.Result = (IntPtr)HTTOPRIGHT;
                         }
-                        else if (clientPoint.Y <= (this.Size.Height - resizeAreaSize)) 
+                        else if (clientPoint.Y <= (this.Size.Height - resizeAreaSize))
                         {
                             if (clientPoint.X <= resizeAreaSize)
                                 m.Result = (IntPtr)HTLEFT;
@@ -76,22 +78,22 @@ namespace AikidoSystem
                         {
                             if (clientPoint.X <= resizeAreaSize)
                                 m.Result = (IntPtr)HTBOTTOMLEFT;
-                            else if (clientPoint.X < (this.Size.Width - resizeAreaSize)) 
+                            else if (clientPoint.X < (this.Size.Width - resizeAreaSize))
                                 m.Result = (IntPtr)HTBOTTOM;
-                            else 
+                            else
                                 m.Result = (IntPtr)HTBOTTOMRIGHT;
                         }
                     }
                 }
                 return;
             }
-            
+
             if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
             {
                 return;
             }
             base.WndProc(ref m);
-            
+
         }
 
         private void Main_Resize(object sender, EventArgs e)
@@ -104,47 +106,20 @@ namespace AikidoSystem
             switch (this.WindowState)
             {
                 case FormWindowState.Maximized:
-                    this.Padding = new Padding(0,8,8,0);
+                    this.Padding = new Padding(0, 8, 8, 0);
                     break;
                 case FormWindowState.Normal:
-                    if(this.Padding.Top != borderSize)
-                        this.Padding = new Padding(borderSize); 
+                    if (this.Padding.Top != borderSize)
+                        this.Padding = new Padding(borderSize);
                     break;
 
             }
-                
-        }
-        private void CollapseMenu()
-        {
-            if (this.panelMenu.Width > 150) //Collapse menu
-            {
-                panelMenu.Width = 100;
-                //pictureBox1.Visible = false;
-                btnMenu.Dock = DockStyle.Top;
-                foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
-                {
-                    menuButton.Text = "";
-                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
-                    menuButton.Padding = new Padding(0);
-                }
-            }
-            else
-            { //Expand menu
-                panelMenu.Width = 173;
-                //pictureBox1.Visible = true;
-                btnMenu.Dock = DockStyle.None;
-                foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
-                {
-                    menuButton.Text = "   " + menuButton.Tag.ToString();
-                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
-                    menuButton.Padding = new Padding(10, 0, 0, 0);
-                }
-            }
+
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            Application.Exit();
         }
 
         private void btvMaximize_Click(object sender, EventArgs e)
@@ -154,22 +129,28 @@ namespace AikidoSystem
             else this.WindowState = FormWindowState.Normal;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            CollapseMenu();
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void iconButton6_Click(object sender, EventArgs e)
+        public static LoginForm loginForm;
+        private void button_M1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            LoginForm.loginForm.ShowDialog();
+            string password = textBox_M2.Texts;
+            string username = textBox_M1.Texts;
+            if (username == "mila" && password == "1234")
+            {
+                Main main = new Main();
+                main.Show();
+                loginForm = this;
+                loginForm.Hide();
+            }
         }
-
     }
 }
