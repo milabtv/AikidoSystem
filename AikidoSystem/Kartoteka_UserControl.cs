@@ -30,9 +30,17 @@ namespace AikidoSystem
             InitializeComponent();
         }
 
-        private void button_M1_Click(object sender, EventArgs e)
+        private void addKartoteka_Click(object sender, EventArgs e)
         {
+            Kartoteka kart = new Kartoteka("Въвеждане на нова Картотека");
+            kart.Show();
 
+        }
+
+        private void editKartoteka_Click(object sender, EventArgs e)
+        {
+            Kartoteka kart = new Kartoteka("Редактиране на Картотека");
+            kart.Show();            
         }
     }
 }

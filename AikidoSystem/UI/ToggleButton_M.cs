@@ -20,11 +20,17 @@ namespace AikidoManagement.UI
         private Color offBackColor = Color.Gray;
         private Color offToggleColor = Color.Gainsboro;
 
+        public Color OnBackColor { get => onBackColor; set => onBackColor = value; }
+        public Color OnToggleColor { get => onToggleColor; set => onToggleColor = value; }
+        public Color OffBackColor { get => offBackColor; set => offBackColor = value; }
+        public Color OffToggleColor { get => offToggleColor; set => offToggleColor = value; }
+
         //Constructor
         public Toggle()
         {
             this.MinimumSize = new Size(45, 22);
         }
+
         private GraphicsPath GetFigurePath()
         {
             int arcSize = this.Height - 1;

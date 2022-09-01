@@ -28,20 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox_M1 = new AikidoSystem.UI.ComboBox_M();
             this.button_M1 = new AikidoSystem.UI.Button_M();
             this.button_M2 = new AikidoSystem.UI.Button_M();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.deletePractice = new AikidoSystem.UI.Button_M();
+            this.editPractice = new AikidoSystem.UI.Button_M();
+            this.addPractice = new AikidoSystem.UI.Button_M();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(703, 362);
-            this.dataGridView1.TabIndex = 0;
             // 
             // comboBox_M1
             // 
@@ -53,7 +50,7 @@
             this.comboBox_M1.IconColor = System.Drawing.Color.MidnightBlue;
             this.comboBox_M1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBox_M1.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox_M1.Location = new System.Drawing.Point(470, 41);
+            this.comboBox_M1.Location = new System.Drawing.Point(482, 40);
             this.comboBox_M1.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboBox_M1.Name = "comboBox_M1";
             this.comboBox_M1.Padding = new System.Windows.Forms.Padding(2);
@@ -73,7 +70,7 @@
             this.button_M1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_M1.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_M1.ForeColor = System.Drawing.Color.Lavender;
-            this.button_M1.Location = new System.Drawing.Point(69, 41);
+            this.button_M1.Location = new System.Drawing.Point(48, 40);
             this.button_M1.Name = "button_M1";
             this.button_M1.Size = new System.Drawing.Size(151, 30);
             this.button_M1.TabIndex = 2;
@@ -92,7 +89,7 @@
             this.button_M2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_M2.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_M2.ForeColor = System.Drawing.Color.Lavender;
-            this.button_M2.Location = new System.Drawing.Point(263, 41);
+            this.button_M2.Location = new System.Drawing.Point(633, 454);
             this.button_M2.Name = "button_M2";
             this.button_M2.Size = new System.Drawing.Size(151, 30);
             this.button_M2.TabIndex = 3;
@@ -100,27 +97,116 @@
             this.button_M2.TextColor = System.Drawing.Color.Lavender;
             this.button_M2.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.deletePractice);
+            this.panel1.Controls.Add(this.editPractice);
+            this.panel1.Controls.Add(this.addPractice);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.comboBox_M1);
+            this.panel1.Controls.Add(this.button_M2);
+            this.panel1.Controls.Add(this.button_M1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(851, 512);
+            this.panel1.TabIndex = 4;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(48, 93);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(736, 334);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // deletePractice
+            // 
+            this.deletePractice.BackColor = System.Drawing.Color.RoyalBlue;
+            this.deletePractice.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.deletePractice.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.deletePractice.BorderRadius = 0;
+            this.deletePractice.BorderSize = 0;
+            this.deletePractice.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.deletePractice.FlatAppearance.BorderSize = 0;
+            this.deletePractice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletePractice.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletePractice.ForeColor = System.Drawing.Color.Lavender;
+            this.deletePractice.Location = new System.Drawing.Point(362, 454);
+            this.deletePractice.Name = "deletePractice";
+            this.deletePractice.Size = new System.Drawing.Size(151, 30);
+            this.deletePractice.TabIndex = 19;
+            this.deletePractice.Text = "Изтрий";
+            this.deletePractice.TextColor = System.Drawing.Color.Lavender;
+            this.deletePractice.UseVisualStyleBackColor = false;
+            this.deletePractice.Click += new System.EventHandler(this.deletePractice_Click);
+            // 
+            // editPractice
+            // 
+            this.editPractice.BackColor = System.Drawing.Color.RoyalBlue;
+            this.editPractice.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.editPractice.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.editPractice.BorderRadius = 0;
+            this.editPractice.BorderSize = 0;
+            this.editPractice.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.editPractice.FlatAppearance.BorderSize = 0;
+            this.editPractice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editPractice.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editPractice.ForeColor = System.Drawing.Color.Lavender;
+            this.editPractice.Location = new System.Drawing.Point(205, 454);
+            this.editPractice.Name = "editPractice";
+            this.editPractice.Size = new System.Drawing.Size(151, 30);
+            this.editPractice.TabIndex = 18;
+            this.editPractice.Text = "Редактирай";
+            this.editPractice.TextColor = System.Drawing.Color.Lavender;
+            this.editPractice.UseVisualStyleBackColor = false;
+            this.editPractice.Click += new System.EventHandler(this.editPractice_Click);
+            // 
+            // addPractice
+            // 
+            this.addPractice.BackColor = System.Drawing.Color.RoyalBlue;
+            this.addPractice.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.addPractice.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.addPractice.BorderRadius = 0;
+            this.addPractice.BorderSize = 0;
+            this.addPractice.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.addPractice.FlatAppearance.BorderSize = 0;
+            this.addPractice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPractice.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPractice.ForeColor = System.Drawing.Color.Lavender;
+            this.addPractice.Location = new System.Drawing.Point(48, 454);
+            this.addPractice.Name = "addPractice";
+            this.addPractice.Size = new System.Drawing.Size(151, 30);
+            this.addPractice.TabIndex = 17;
+            this.addPractice.Text = "Добави тренировка";
+            this.addPractice.TextColor = System.Drawing.Color.Lavender;
+            this.addPractice.UseVisualStyleBackColor = false;
+            this.addPractice.Click += new System.EventHandler(this.addPractice_Click);
+            // 
             // Timetable_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.Controls.Add(this.button_M2);
-            this.Controls.Add(this.button_M1);
-            this.Controls.Add(this.comboBox_M1);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Controls.Add(this.panel1);
             this.Name = "Timetable_UserControl";
             this.Size = new System.Drawing.Size(851, 512);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private UI.ComboBox_M comboBox_M1;
         private UI.Button_M button_M1;
         private UI.Button_M button_M2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private UI.Button_M deletePractice;
+        private UI.Button_M editPractice;
+        private UI.Button_M addPractice;
     }
 }

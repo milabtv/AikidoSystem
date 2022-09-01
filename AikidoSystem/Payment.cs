@@ -11,19 +11,18 @@ using System.Windows.Forms;
 
 namespace AikidoSystem
 {
-    public partial class Kartoteka : Form
+    public partial class Payment : Form
     {
         private int borderSize = 4;
-       
-        public Kartoteka(string labelText)
+        public Payment(string labelText)
         {
             InitializeComponent();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.MidnightBlue;
             label15.Text = labelText;
             label15.Left = (this.Width - label15.Width) / 2;
-        }        
-        
+        }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -120,56 +119,15 @@ namespace AikidoSystem
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void Kartoteka_Load(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
+            this.Dispose();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-       
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            panelParent.Controls.Clear();
-            panelParent.Width = 1;
-            this.Width -= KartotekaParent.Instance.Width;
-            button_M1.Left = (this.Width - button_M1.Width) / 2;
-            label15.Left = (this.Width - label15.Width) / 2;
-            this.Close();
-            this.Dispose();
-        }
-
-        private void toggle1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (toggle1.Checked)
-            {
-                this.Width += KartotekaParent.Instance.Width;
-                panelParent.Width = KartotekaParent.Instance.Width;
-                if (!panelParent.Controls.Contains(KartotekaParent.Instance))
-                {
-                    panelParent.Controls.Add(KartotekaParent.Instance);
-                    KartotekaParent.Instance.Dock = DockStyle.Fill;
-                }
-
-                KartotekaParent.Instance.BringToFront();
-                KartotekaParent.Instance.Focus();                
-                
-                button_M1.Left = (this.Width - button_M1.Width) / 2;
-                label15.Left = (this.Width - label15.Width) / 2;
-
-
-            }
-            else
-            {
-                panelParent.Controls.Clear();
-                panelParent.Width = 1;
-                this.Width -= KartotekaParent.Instance.Width;
-                button_M1.Left = (this.Width - button_M1.Width) / 2;
-                label15.Left = (this.Width - label15.Width) / 2;
-            }
         }
     }
 }

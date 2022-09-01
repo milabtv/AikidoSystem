@@ -34,5 +34,20 @@ namespace AikidoSystem
         {
 
         }
+
+        private void addPractice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editPractice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deletePractice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

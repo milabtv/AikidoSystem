@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMinimize = new FontAwesome.Sharp.IconButton();
+            this.btvMaximize = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnDocs = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.btnGroups = new FontAwesome.Sharp.IconButton();
@@ -37,15 +45,7 @@
             this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.btnKartoteka = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.btvMaximize = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -66,6 +66,86 @@
             this.panelMenu.Controls.Add(this.panel1);
             resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnMenu);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelTitleBar.Controls.Add(this.pictureBox2);
+            this.panelTitleBar.Controls.Add(this.pictureBox1);
+            this.panelTitleBar.Controls.Add(this.btnMinimize);
+            this.panelTitleBar.Controls.Add(this.btvMaximize);
+            this.panelTitleBar.Controls.Add(this.btnClose);
+            resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.LightSteelBlue;
+            resources.ApplyResources(this.panelDesktop, "panelDesktop");
+            this.panelDesktop.Name = "panelDesktop";
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.Image = global::AikidoSystem.Properties.Resources.title_mb_2;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::AikidoSystem.Properties.Resources.logo;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnMinimize
+            // 
+            resources.ApplyResources(this.btnMinimize, "btnMinimize");
+            this.btnMinimize.BackColor = System.Drawing.Color.Lavender;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMinimize.IconColor = System.Drawing.Color.Black;
+            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMinimize.IconSize = 25;
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btvMaximize
+            // 
+            resources.ApplyResources(this.btvMaximize, "btvMaximize");
+            this.btvMaximize.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btvMaximize.FlatAppearance.BorderSize = 0;
+            this.btvMaximize.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btvMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
+            this.btvMaximize.IconColor = System.Drawing.Color.Lavender;
+            this.btvMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btvMaximize.IconSize = 25;
+            this.btvMaximize.Name = "btvMaximize";
+            this.btvMaximize.UseVisualStyleBackColor = false;
+            this.btvMaximize.Click += new System.EventHandler(this.btvMaximize_Click);
+            // 
+            // btnClose
+            // 
+            resources.ApplyResources(this.btnClose, "btnClose");
+            this.btnClose.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnClose.IconColor = System.Drawing.Color.Lavender;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 25;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDocs
             // 
@@ -159,12 +239,6 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnMenu);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
-            // 
             // btnMenu
             // 
             resources.ApplyResources(this.btnMenu, "btnMenu");
@@ -175,80 +249,6 @@
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panelTitleBar.Controls.Add(this.pictureBox2);
-            this.panelTitleBar.Controls.Add(this.pictureBox1);
-            this.panelTitleBar.Controls.Add(this.btnMinimize);
-            this.panelTitleBar.Controls.Add(this.btvMaximize);
-            this.panelTitleBar.Controls.Add(this.btnClose);
-            resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Image = global::AikidoSystem.Properties.Resources.title_mb_2;
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Image = global::AikidoSystem.Properties.Resources.logo;
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnMinimize
-            // 
-            resources.ApplyResources(this.btnMinimize, "btnMinimize");
-            this.btnMinimize.BackColor = System.Drawing.Color.Lavender;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMinimize.IconColor = System.Drawing.Color.Black;
-            this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 25;
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btvMaximize
-            // 
-            resources.ApplyResources(this.btvMaximize, "btvMaximize");
-            this.btvMaximize.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btvMaximize.FlatAppearance.BorderSize = 0;
-            this.btvMaximize.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btvMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.btvMaximize.IconColor = System.Drawing.Color.Lavender;
-            this.btvMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btvMaximize.IconSize = 25;
-            this.btvMaximize.Name = "btvMaximize";
-            this.btvMaximize.UseVisualStyleBackColor = false;
-            this.btvMaximize.Click += new System.EventHandler(this.btvMaximize_Click);
-            // 
-            // btnClose
-            // 
-            resources.ApplyResources(this.btnClose, "btnClose");
-            this.btnClose.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnClose.IconColor = System.Drawing.Color.Lavender;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 25;
-            this.btnClose.Name = "btnClose";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.Color.Lavender;
-            resources.ApplyResources(this.panelDesktop, "panelDesktop");
-            this.panelDesktop.Name = "panelDesktop";
             // 
             // Main
             // 

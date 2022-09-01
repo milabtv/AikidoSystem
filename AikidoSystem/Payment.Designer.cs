@@ -1,6 +1,6 @@
 ﻿namespace AikidoSystem
 {
-    partial class Kartoteka
+    partial class Payment
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelParent = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.textBox_M4 = new AikidoSystem.UI.TextBox_M();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox_M14 = new AikidoSystem.UI.TextBox_M();
             this.label13 = new System.Windows.Forms.Label();
@@ -53,44 +55,86 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button_M1 = new AikidoSystem.UI.Button_M();
             this.textBox_M8 = new AikidoSystem.UI.TextBox_M();
-            this.panelKartoteka = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.toggle1 = new AikidoManagement.UI.Toggle();
-            this.textBox_M1 = new AikidoSystem.UI.TextBox_M();
-            this.textBox_M2 = new AikidoSystem.UI.TextBox_M();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_M7 = new AikidoSystem.UI.TextBox_M();
-            this.textBox_M3 = new AikidoSystem.UI.TextBox_M();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox_M6 = new AikidoSystem.UI.TextBox_M();
-            this.textBox_M4 = new AikidoSystem.UI.TextBox_M();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_M5 = new AikidoSystem.UI.TextBox_M();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox_M1 = new AikidoSystem.UI.ComboBox_M();
+            this.comboBox_M2 = new AikidoSystem.UI.ComboBox_M();
+            this.comboBox_M3 = new AikidoSystem.UI.ComboBox_M();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panelKartoteka.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel4
             // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(510, 86);
-            this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(465, 45);
+            this.panel4.TabIndex = 36;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Unicode MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Lavender;
+            this.label15.Location = new System.Drawing.Point(153, 10);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(158, 28);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Членски внос";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Location = new System.Drawing.Point(102, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 25);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Дата";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label3.Location = new System.Drawing.Point(102, 191);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 25);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Заплатен месец";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(102, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(201, 25);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Членски внос - Вид";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(102, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 25);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Картотекиран";
             // 
             // btnMinimize
             // 
@@ -104,22 +148,12 @@
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 25;
             this.btnMinimize.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnMinimize.Location = new System.Drawing.Point(419, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(374, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(46, 30);
             this.btnMinimize.TabIndex = 8;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(357, 86);
-            this.panel3.TabIndex = 1;
             // 
             // pictureBox2
             // 
@@ -155,7 +189,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 25;
             this.btnClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnClose.Location = new System.Drawing.Point(465, 0);
+            this.btnClose.Location = new System.Drawing.Point(420, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(46, 30);
             this.btnClose.TabIndex = 6;
@@ -165,8 +199,15 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel2.Controls.Add(this.panelParent);
+            this.panel2.Controls.Add(this.comboBox_M3);
+            this.panel2.Controls.Add(this.comboBox_M2);
+            this.panel2.Controls.Add(this.comboBox_M1);
             this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.textBox_M4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.textBox_M14);
             this.panel2.Controls.Add(this.label13);
@@ -182,43 +223,32 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.button_M1);
             this.panel2.Controls.Add(this.textBox_M8);
-            this.panel2.Controls.Add(this.panelKartoteka);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 86);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(510, 667);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(465, 416);
+            this.panel2.TabIndex = 3;
             // 
-            // panelParent
+            // textBox_M4
             // 
-            this.panelParent.Location = new System.Drawing.Point(411, 51);
-            this.panelParent.Name = "panelParent";
-            this.panelParent.Size = new System.Drawing.Size(54, 514);
-            this.panelParent.TabIndex = 39;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(510, 45);
-            this.panel4.TabIndex = 36;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial Unicode MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Lavender;
-            this.label15.Location = new System.Drawing.Point(85, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(341, 28);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Въвеждане на нова Картотека";
+            this.textBox_M4.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_M4.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.textBox_M4.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.textBox_M4.BorderRadius = 0;
+            this.textBox_M4.BorderSize = 5;
+            this.textBox_M4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_M4.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_M4.Location = new System.Drawing.Point(107, 282);
+            this.textBox_M4.Multiline = false;
+            this.textBox_M4.Name = "textBox_M4";
+            this.textBox_M4.Padding = new System.Windows.Forms.Padding(7);
+            this.textBox_M4.PasswordChar = false;
+            this.textBox_M4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBox_M4.PlaceholderText = "";
+            this.textBox_M4.Size = new System.Drawing.Size(250, 31);
+            this.textBox_M4.TabIndex = 28;
+            this.textBox_M4.Texts = "";
+            this.textBox_M4.UnderlinedStyle = true;
             // 
             // label14
             // 
@@ -434,7 +464,7 @@
             this.button_M1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_M1.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_M1.ForeColor = System.Drawing.Color.Lavender;
-            this.button_M1.Location = new System.Drawing.Point(180, 595);
+            this.button_M1.Location = new System.Drawing.Point(157, 333);
             this.button_M1.Name = "button_M1";
             this.button_M1.Size = new System.Drawing.Size(150, 40);
             this.button_M1.TabIndex = 9;
@@ -463,329 +493,118 @@
             this.textBox_M8.Texts = "";
             this.textBox_M8.UnderlinedStyle = true;
             // 
-            // panelKartoteka
+            // panel1
             // 
-            this.panelKartoteka.Controls.Add(this.label16);
-            this.panelKartoteka.Controls.Add(this.label1);
-            this.panelKartoteka.Controls.Add(this.toggle1);
-            this.panelKartoteka.Controls.Add(this.textBox_M1);
-            this.panelKartoteka.Controls.Add(this.textBox_M2);
-            this.panelKartoteka.Controls.Add(this.label7);
-            this.panelKartoteka.Controls.Add(this.label2);
-            this.panelKartoteka.Controls.Add(this.textBox_M7);
-            this.panelKartoteka.Controls.Add(this.textBox_M3);
-            this.panelKartoteka.Controls.Add(this.label6);
-            this.panelKartoteka.Controls.Add(this.label3);
-            this.panelKartoteka.Controls.Add(this.textBox_M6);
-            this.panelKartoteka.Controls.Add(this.textBox_M4);
-            this.panelKartoteka.Controls.Add(this.label5);
-            this.panelKartoteka.Controls.Add(this.label4);
-            this.panelKartoteka.Controls.Add(this.textBox_M5);
-            this.panelKartoteka.Location = new System.Drawing.Point(105, 51);
-            this.panelKartoteka.Name = "panelKartoteka";
-            this.panelKartoteka.Size = new System.Drawing.Size(300, 514);
-            this.panelKartoteka.TabIndex = 39;
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(465, 86);
+            this.panel1.TabIndex = 2;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // label16
+            // panel3
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label16.Location = new System.Drawing.Point(18, 474);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(116, 25);
-            this.label16.TabIndex = 38;
-            this.label16.Text = "Настойник";
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(357, 86);
+            this.panel3.TabIndex = 1;
             // 
-            // label1
+            // comboBox_M1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(16, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 25);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Име";
+            this.comboBox_M1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_M1.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.comboBox_M1.BorderSize = 2;
+            this.comboBox_M1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBox_M1.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBox_M1.IconColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBox_M1.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox_M1.Location = new System.Drawing.Point(107, 89);
+            this.comboBox_M1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox_M1.Name = "comboBox_M1";
+            this.comboBox_M1.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBox_M1.Size = new System.Drawing.Size(253, 30);
+            this.comboBox_M1.TabIndex = 2;
+            this.comboBox_M1.Texts = "";
             // 
-            // toggle1
+            // comboBox_M2
             // 
-            this.toggle1.AutoSize = true;
-            this.toggle1.Location = new System.Drawing.Point(208, 477);
-            this.toggle1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggle1.Name = "toggle1";
-            this.toggle1.OffBackColor = System.Drawing.Color.CornflowerBlue;
-            this.toggle1.OffToggleColor = System.Drawing.Color.Lavender;
-            this.toggle1.OnBackColor = System.Drawing.Color.MidnightBlue;
-            this.toggle1.OnToggleColor = System.Drawing.Color.CornflowerBlue;
-            this.toggle1.Size = new System.Drawing.Size(61, 22);
-            this.toggle1.TabIndex = 37;
-            this.toggle1.Text = "toggle1";
-            this.toggle1.UseVisualStyleBackColor = true;
-            this.toggle1.CheckedChanged += new System.EventHandler(this.toggle1_CheckedChanged);
+            this.comboBox_M2.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_M2.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.comboBox_M2.BorderSize = 2;
+            this.comboBox_M2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBox_M2.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBox_M2.IconColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBox_M2.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox_M2.Location = new System.Drawing.Point(107, 155);
+            this.comboBox_M2.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox_M2.Name = "comboBox_M2";
+            this.comboBox_M2.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBox_M2.Size = new System.Drawing.Size(253, 30);
+            this.comboBox_M2.TabIndex = 37;
+            this.comboBox_M2.Texts = "";
             // 
-            // textBox_M1
+            // comboBox_M3
             // 
-            this.textBox_M1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_M1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M1.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M1.BorderRadius = 0;
-            this.textBox_M1.BorderSize = 5;
-            this.textBox_M1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M1.Location = new System.Drawing.Point(19, 37);
-            this.textBox_M1.Multiline = false;
-            this.textBox_M1.Name = "textBox_M1";
-            this.textBox_M1.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M1.PasswordChar = false;
-            this.textBox_M1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M1.PlaceholderText = "";
-            this.textBox_M1.Size = new System.Drawing.Size(250, 31);
-            this.textBox_M1.TabIndex = 22;
-            this.textBox_M1.Texts = "";
-            this.textBox_M1.UnderlinedStyle = true;
+            this.comboBox_M3.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_M3.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.comboBox_M3.BorderSize = 2;
+            this.comboBox_M3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBox_M3.ForeColor = System.Drawing.Color.DimGray;
+            this.comboBox_M3.IconColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBox_M3.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox_M3.Location = new System.Drawing.Point(107, 219);
+            this.comboBox_M3.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox_M3.Name = "comboBox_M3";
+            this.comboBox_M3.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBox_M3.Size = new System.Drawing.Size(253, 30);
+            this.comboBox_M3.TabIndex = 38;
+            this.comboBox_M3.Texts = "";
             // 
-            // textBox_M2
-            // 
-            this.textBox_M2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_M2.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M2.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M2.BorderRadius = 0;
-            this.textBox_M2.BorderSize = 5;
-            this.textBox_M2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M2.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M2.Location = new System.Drawing.Point(19, 103);
-            this.textBox_M2.Multiline = false;
-            this.textBox_M2.Name = "textBox_M2";
-            this.textBox_M2.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M2.PasswordChar = false;
-            this.textBox_M2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M2.PlaceholderText = "";
-            this.textBox_M2.Size = new System.Drawing.Size(250, 31);
-            this.textBox_M2.TabIndex = 24;
-            this.textBox_M2.Texts = "";
-            this.textBox_M2.UnderlinedStyle = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(14, 393);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 25);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Адрес";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(14, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 25);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Презиме";
-            // 
-            // textBox_M7
-            // 
-            this.textBox_M7.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_M7.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M7.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M7.BorderRadius = 0;
-            this.textBox_M7.BorderSize = 5;
-            this.textBox_M7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M7.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M7.Location = new System.Drawing.Point(19, 421);
-            this.textBox_M7.Multiline = false;
-            this.textBox_M7.Name = "textBox_M7";
-            this.textBox_M7.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M7.PasswordChar = false;
-            this.textBox_M7.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M7.PlaceholderText = "";
-            this.textBox_M7.Size = new System.Drawing.Size(250, 31);
-            this.textBox_M7.TabIndex = 34;
-            this.textBox_M7.Texts = "";
-            this.textBox_M7.UnderlinedStyle = true;
-            // 
-            // textBox_M3
-            // 
-            this.textBox_M3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_M3.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M3.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M3.BorderRadius = 0;
-            this.textBox_M3.BorderSize = 5;
-            this.textBox_M3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M3.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M3.Location = new System.Drawing.Point(19, 167);
-            this.textBox_M3.Multiline = false;
-            this.textBox_M3.Name = "textBox_M3";
-            this.textBox_M3.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M3.PasswordChar = false;
-            this.textBox_M3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M3.PlaceholderText = "";
-            this.textBox_M3.Size = new System.Drawing.Size(250, 31);
-            this.textBox_M3.TabIndex = 26;
-            this.textBox_M3.Texts = "";
-            this.textBox_M3.UnderlinedStyle = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(14, 329);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 25);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Имейл";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(14, 139);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 25);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Фамилия";
-            // 
-            // textBox_M6
-            // 
-            this.textBox_M6.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_M6.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M6.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M6.BorderRadius = 0;
-            this.textBox_M6.BorderSize = 5;
-            this.textBox_M6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M6.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M6.Location = new System.Drawing.Point(19, 357);
-            this.textBox_M6.Multiline = false;
-            this.textBox_M6.Name = "textBox_M6";
-            this.textBox_M6.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M6.PasswordChar = false;
-            this.textBox_M6.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M6.PlaceholderText = "";
-            this.textBox_M6.Size = new System.Drawing.Size(250, 31);
-            this.textBox_M6.TabIndex = 32;
-            this.textBox_M6.Texts = "";
-            this.textBox_M6.UnderlinedStyle = true;
-            // 
-            // textBox_M4
-            // 
-            this.textBox_M4.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_M4.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M4.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M4.BorderRadius = 0;
-            this.textBox_M4.BorderSize = 5;
-            this.textBox_M4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M4.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M4.Location = new System.Drawing.Point(19, 230);
-            this.textBox_M4.Multiline = false;
-            this.textBox_M4.Name = "textBox_M4";
-            this.textBox_M4.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M4.PasswordChar = false;
-            this.textBox_M4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M4.PlaceholderText = "";
-            this.textBox_M4.Size = new System.Drawing.Size(250, 31);
-            this.textBox_M4.TabIndex = 28;
-            this.textBox_M4.Texts = "";
-            this.textBox_M4.UnderlinedStyle = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(14, 266);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 25);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Телефон";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(14, 202);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 25);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "ЕГН";
-            // 
-            // textBox_M5
-            // 
-            this.textBox_M5.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_M5.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M5.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M5.BorderRadius = 0;
-            this.textBox_M5.BorderSize = 5;
-            this.textBox_M5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M5.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M5.Location = new System.Drawing.Point(19, 294);
-            this.textBox_M5.Multiline = false;
-            this.textBox_M5.Name = "textBox_M5";
-            this.textBox_M5.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M5.PasswordChar = false;
-            this.textBox_M5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M5.PlaceholderText = "";
-            this.textBox_M5.Size = new System.Drawing.Size(250, 31);
-            this.textBox_M5.TabIndex = 30;
-            this.textBox_M5.Texts = "";
-            this.textBox_M5.UnderlinedStyle = true;
-            // 
-            // Kartoteka
+            // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(510, 753);
+            this.ClientSize = new System.Drawing.Size(465, 502);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Kartoteka";
-            this.Text = "Kartoteka";
-            this.Load += new System.EventHandler(this.Kartoteka_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.Name = "Payment";
+            this.Text = "Payment";
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panelKartoteka.ResumeLayout(false);
-            this.panelKartoteka.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton btnMinimize;
-        private FontAwesome.Sharp.IconButton btnClose;
-        private UI.Button_M button_M1;
-        private System.Windows.Forms.Label label7;
-        private UI.TextBox_M textBox_M7;
-        private System.Windows.Forms.Label label6;
-        private UI.TextBox_M textBox_M6;
-        private System.Windows.Forms.Label label5;
-        private UI.TextBox_M textBox_M5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label4;
         private UI.TextBox_M textBox_M4;
         private System.Windows.Forms.Label label3;
-        private UI.TextBox_M textBox_M3;
         private System.Windows.Forms.Label label2;
-        private UI.TextBox_M textBox_M2;
         private System.Windows.Forms.Label label1;
-        private UI.TextBox_M textBox_M1;
+        private FontAwesome.Sharp.IconButton btnMinimize;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label14;
         private UI.TextBox_M textBox_M14;
         private System.Windows.Forms.Label label13;
@@ -799,12 +618,12 @@
         private System.Windows.Forms.Label label9;
         private UI.TextBox_M textBox_M9;
         private System.Windows.Forms.Label label8;
+        private UI.Button_M button_M1;
         private UI.TextBox_M textBox_M8;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private AikidoManagement.UI.Toggle toggle1;
-        private System.Windows.Forms.Panel panelKartoteka;
-        private System.Windows.Forms.Panel panelParent;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private UI.ComboBox_M comboBox_M3;
+        private UI.ComboBox_M comboBox_M2;
+        private UI.ComboBox_M comboBox_M1;
     }
 }
