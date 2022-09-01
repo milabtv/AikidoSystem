@@ -12,6 +12,19 @@ namespace AikidoSystem
 {
     public partial class Home_UserControl : UserControl
     {
+        private static Home_UserControl instance = null;
+
+        public static Home_UserControl Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Home_UserControl();
+                }
+                return instance;
+            }
+        }
         public Home_UserControl()
         {
             InitializeComponent();

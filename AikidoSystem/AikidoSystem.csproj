@@ -81,6 +81,12 @@
     <Compile Include="Home_UserControl.Designer.cs">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kartoteka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kartoteka.Designer.cs">
+      <DependentUpon>Kartoteka.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kartoteka_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +105,18 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Objects\Exams.cs" />
+    <Compile Include="Objects\Group.cs" />
+    <Compile Include="Objects\GroupList.cs" />
+    <Compile Include="Objects\Hall.cs" />
+    <Compile Include="Objects\Kartoteka.cs" />
+    <Compile Include="Objects\KartotekaParent.cs" />
+    <Compile Include="Objects\KyuLevels.cs" />
+    <Compile Include="Objects\levelType.cs" />
+    <Compile Include="Objects\Payment.cs" />
+    <Compile Include="Objects\PaymentType.cs" />
+    <Compile Include="Objects\Practice.cs" />
+    <Compile Include="Objects\Seminar.cs" />
     <Compile Include="Payment_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +160,9 @@
     <Compile Include="UI\ToggleButton_M.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Documents_UserControl.resx">
+      <DependentUpon>Documents_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home_UserControl.resx">
       <DependentUpon>Home_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kartoteka.resx">
+      <DependentUpon>Kartoteka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kartoteka_UserControl.resx">
       <DependentUpon>Kartoteka_UserControl.cs</DependentUpon>

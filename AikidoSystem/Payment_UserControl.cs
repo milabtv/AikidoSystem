@@ -12,6 +12,19 @@ namespace AikidoSystem
 {
     public partial class Payment_UserControl : UserControl
     {
+        private static Payment_UserControl instance = null;
+
+        public static Payment_UserControl Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Payment_UserControl();
+                }
+                return instance;
+            }
+        }
         public Payment_UserControl()
         {
             InitializeComponent();

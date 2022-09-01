@@ -12,6 +12,19 @@ namespace AikidoSystem
 {
     public partial class Kartoteka_UserControl : UserControl
     {
+        private static Kartoteka_UserControl instance = null;
+
+        public static Kartoteka_UserControl Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Kartoteka_UserControl();
+                }
+                return instance;
+            }
+        }
         public Kartoteka_UserControl()
         {
             InitializeComponent();

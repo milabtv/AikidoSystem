@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnDocs = new FontAwesome.Sharp.IconButton();
+            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.btnGroups = new FontAwesome.Sharp.IconButton();
+            this.btnTimetable = new FontAwesome.Sharp.IconButton();
+            this.btnPayment = new FontAwesome.Sharp.IconButton();
+            this.btnKartoteka = new FontAwesome.Sharp.IconButton();
+            this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btvMaximize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnMenu = new FontAwesome.Sharp.IconButton();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -56,22 +56,125 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panelMenu.Controls.Add(this.iconButton7);
+            this.panelMenu.Controls.Add(this.btnDocs);
             this.panelMenu.Controls.Add(this.iconButton6);
-            this.panelMenu.Controls.Add(this.iconButton5);
-            this.panelMenu.Controls.Add(this.iconButton4);
-            this.panelMenu.Controls.Add(this.iconButton3);
-            this.panelMenu.Controls.Add(this.iconButton2);
-            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.btnGroups);
+            this.panelMenu.Controls.Add(this.btnTimetable);
+            this.panelMenu.Controls.Add(this.btnPayment);
+            this.panelMenu.Controls.Add(this.btnKartoteka);
+            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panel1);
             resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
+            // 
+            // btnDocs
+            // 
+            resources.ApplyResources(this.btnDocs, "btnDocs");
+            this.btnDocs.FlatAppearance.BorderSize = 0;
+            this.btnDocs.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnDocs.IconChar = FontAwesome.Sharp.IconChar.Paperclip;
+            this.btnDocs.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.btnDocs.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDocs.Name = "btnDocs";
+            this.btnDocs.Tag = "Документи";
+            this.btnDocs.UseVisualStyleBackColor = true;
+            this.btnDocs.Click += new System.EventHandler(this.btnDocs_Click);
+            // 
+            // iconButton6
+            // 
+            resources.ApplyResources(this.iconButton6, "iconButton6");
+            this.iconButton6.FlatAppearance.BorderSize = 0;
+            this.iconButton6.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.SignOut;
+            this.iconButton6.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton6.Name = "iconButton6";
+            this.iconButton6.Tag = "Излизане";
+            this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
+            // 
+            // btnGroups
+            // 
+            resources.ApplyResources(this.btnGroups, "btnGroups");
+            this.btnGroups.FlatAppearance.BorderSize = 0;
+            this.btnGroups.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnGroups.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            this.btnGroups.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.btnGroups.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGroups.Name = "btnGroups";
+            this.btnGroups.Tag = "Групи";
+            this.btnGroups.UseVisualStyleBackColor = true;
+            this.btnGroups.Click += new System.EventHandler(this.btnGroups_Click);
+            // 
+            // btnTimetable
+            // 
+            resources.ApplyResources(this.btnTimetable, "btnTimetable");
+            this.btnTimetable.FlatAppearance.BorderSize = 0;
+            this.btnTimetable.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnTimetable.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
+            this.btnTimetable.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.btnTimetable.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTimetable.Name = "btnTimetable";
+            this.btnTimetable.Tag = "График";
+            this.btnTimetable.UseVisualStyleBackColor = true;
+            this.btnTimetable.Click += new System.EventHandler(this.btnTimetable_Click);
+            // 
+            // btnPayment
+            // 
+            resources.ApplyResources(this.btnPayment, "btnPayment");
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.btnPayment.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.btnPayment.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Tag = "Членски внос";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // btnKartoteka
+            // 
+            resources.ApplyResources(this.btnKartoteka, "btnKartoteka");
+            this.btnKartoteka.FlatAppearance.BorderSize = 0;
+            this.btnKartoteka.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnKartoteka.IconChar = FontAwesome.Sharp.IconChar.ListOl;
+            this.btnKartoteka.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.btnKartoteka.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKartoteka.Name = "btnKartoteka";
+            this.btnKartoteka.Tag = "Картотеки";
+            this.btnKartoteka.UseVisualStyleBackColor = true;
+            this.btnKartoteka.Click += new System.EventHandler(this.btnKartoteka_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.MidnightBlue;
+            resources.ApplyResources(this.btnHome, "btnHome");
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.btnHome.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Tag = "Начало";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnMenu);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // btnMenu
+            // 
+            resources.ApplyResources(this.btnMenu, "btnMenu");
+            this.btnMenu.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnMenu.IconChar = FontAwesome.Sharp.IconChar.ListDots;
+            this.btnMenu.IconColor = System.Drawing.Color.Lavender;
+            this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // panelTitleBar
             // 
@@ -84,12 +187,6 @@
             resources.ApplyResources(this.panelTitleBar, "panelTitleBar");
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.Color.Lavender;
-            resources.ApplyResources(this.panelDesktop, "panelDesktop");
-            this.panelDesktop.Name = "panelDesktop";
             // 
             // pictureBox2
             // 
@@ -147,102 +244,11 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // iconButton6
+            // panelDesktop
             // 
-            resources.ApplyResources(this.iconButton6, "iconButton6");
-            this.iconButton6.FlatAppearance.BorderSize = 0;
-            this.iconButton6.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.SignOut;
-            this.iconButton6.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Tag = "Излизане";
-            this.iconButton6.UseVisualStyleBackColor = true;
-            this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
-            // 
-            // iconButton5
-            // 
-            resources.ApplyResources(this.iconButton5, "iconButton5");
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
-            this.iconButton5.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Tag = "Групи";
-            this.iconButton5.UseVisualStyleBackColor = true;
-            // 
-            // iconButton4
-            // 
-            resources.ApplyResources(this.iconButton4, "iconButton4");
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
-            this.iconButton4.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Tag = "График";
-            this.iconButton4.UseVisualStyleBackColor = true;
-            // 
-            // iconButton3
-            // 
-            resources.ApplyResources(this.iconButton3, "iconButton3");
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
-            this.iconButton3.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Tag = "Членски внос";
-            this.iconButton3.UseVisualStyleBackColor = true;
-            // 
-            // iconButton2
-            // 
-            resources.ApplyResources(this.iconButton2, "iconButton2");
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ListOl;
-            this.iconButton2.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Tag = "Картотеки";
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.MidnightBlue;
-            resources.ApplyResources(this.iconButton1, "iconButton1");
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton1.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Tag = "Начало";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // btnMenu
-            // 
-            resources.ApplyResources(this.btnMenu, "btnMenu");
-            this.btnMenu.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnMenu.IconChar = FontAwesome.Sharp.IconChar.ListDots;
-            this.btnMenu.IconColor = System.Drawing.Color.Lavender;
-            this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // iconButton7
-            // 
-            resources.ApplyResources(this.iconButton7, "iconButton7");
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Paperclip;
-            this.iconButton7.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Tag = "Документи";
-            this.iconButton7.UseVisualStyleBackColor = true;
+            this.panelDesktop.BackColor = System.Drawing.Color.Lavender;
+            resources.ApplyResources(this.panelDesktop, "panelDesktop");
+            this.panelDesktop.Name = "panelDesktop";
             // 
             // Main
             // 
@@ -268,18 +274,18 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelDesktop;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnGroups;
+        private FontAwesome.Sharp.IconButton btnTimetable;
+        private FontAwesome.Sharp.IconButton btnPayment;
+        private FontAwesome.Sharp.IconButton btnKartoteka;
         private FontAwesome.Sharp.IconButton btvMaximize;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private FontAwesome.Sharp.IconButton iconButton7;
+        private FontAwesome.Sharp.IconButton btnDocs;
     }
 }

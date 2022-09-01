@@ -12,6 +12,19 @@ namespace AikidoSystem
 {
     public partial class Timetable_UserControl : UserControl
     {
+        private static Timetable_UserControl instance = null;
+
+        public static Timetable_UserControl Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Timetable_UserControl();
+                }
+                return instance;
+            }
+        }
         public Timetable_UserControl()
         {
             InitializeComponent();

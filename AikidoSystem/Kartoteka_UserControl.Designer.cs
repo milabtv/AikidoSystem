@@ -37,6 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button_M2 = new AikidoSystem.UI.Button_M();
+            this.button_M3 = new AikidoSystem.UI.Button_M();
+            this.button_M4 = new AikidoSystem.UI.Button_M();
+            this.button_M5 = new AikidoSystem.UI.Button_M();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,10 +189,74 @@
             this.button_M2.TextColor = System.Drawing.Color.Lavender;
             this.button_M2.UseVisualStyleBackColor = false;
             // 
+            // button_M3
+            // 
+            this.button_M3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button_M3.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.button_M3.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button_M3.BorderRadius = 0;
+            this.button_M3.BorderSize = 0;
+            this.button_M3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button_M3.FlatAppearance.BorderSize = 0;
+            this.button_M3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_M3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_M3.ForeColor = System.Drawing.Color.Lavender;
+            this.button_M3.Location = new System.Drawing.Point(50, 464);
+            this.button_M3.Name = "button_M3";
+            this.button_M3.Size = new System.Drawing.Size(151, 30);
+            this.button_M3.TabIndex = 14;
+            this.button_M3.Text = "Добави Нов";
+            this.button_M3.TextColor = System.Drawing.Color.Lavender;
+            this.button_M3.UseVisualStyleBackColor = false;
+            // 
+            // button_M4
+            // 
+            this.button_M4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button_M4.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.button_M4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button_M4.BorderRadius = 0;
+            this.button_M4.BorderSize = 0;
+            this.button_M4.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button_M4.FlatAppearance.BorderSize = 0;
+            this.button_M4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_M4.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_M4.ForeColor = System.Drawing.Color.Lavender;
+            this.button_M4.Location = new System.Drawing.Point(207, 464);
+            this.button_M4.Name = "button_M4";
+            this.button_M4.Size = new System.Drawing.Size(151, 30);
+            this.button_M4.TabIndex = 15;
+            this.button_M4.Text = "Редактирай";
+            this.button_M4.TextColor = System.Drawing.Color.Lavender;
+            this.button_M4.UseVisualStyleBackColor = false;
+            // 
+            // button_M5
+            // 
+            this.button_M5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button_M5.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.button_M5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button_M5.BorderRadius = 0;
+            this.button_M5.BorderSize = 0;
+            this.button_M5.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.button_M5.FlatAppearance.BorderSize = 0;
+            this.button_M5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_M5.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_M5.ForeColor = System.Drawing.Color.Lavender;
+            this.button_M5.Location = new System.Drawing.Point(364, 464);
+            this.button_M5.Name = "button_M5";
+            this.button_M5.Size = new System.Drawing.Size(151, 30);
+            this.button_M5.TabIndex = 16;
+            this.button_M5.Text = "Изтрий";
+            this.button_M5.TextColor = System.Drawing.Color.Lavender;
+            this.button_M5.UseVisualStyleBackColor = false;
+            // 
             // Kartoteka_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.Controls.Add(this.button_M5);
+            this.Controls.Add(this.button_M4);
+            this.Controls.Add(this.button_M3);
             this.Controls.Add(this.button_M2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -218,5 +285,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private UI.Button_M button_M2;
+        private UI.Button_M button_M3;
+        private UI.Button_M button_M4;
+        private UI.Button_M button_M5;
     }
 }

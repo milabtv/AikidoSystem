@@ -135,7 +135,7 @@ namespace AikidoSystem
                 btnMenu.Dock = DockStyle.None;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
-                    menuButton.Text = "   " + menuButton.Tag.ToString();
+                    menuButton.Text =menuButton.Tag.ToString();
                     menuButton.ImageAlign = ContentAlignment.MiddleLeft;
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                 }
@@ -171,5 +171,102 @@ namespace AikidoSystem
             LoginForm.loginForm.ShowDialog();
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Home_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Home_UserControl.Instance);
+                Home_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Home_UserControl.Instance.BringToFront();
+            Home_UserControl.Instance.Focus();
+            menuChange(btnHome);
+            btnHome.BackColor = Color.RoyalBlue;
+        }
+
+        private void btnKartoteka_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Kartoteka_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Kartoteka_UserControl.Instance);
+                Kartoteka_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Kartoteka_UserControl.Instance.BringToFront();
+            Kartoteka_UserControl.Instance.Focus();
+            menuChange(btnKartoteka);
+            btnKartoteka.BackColor = Color.RoyalBlue;
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Payment_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Payment_UserControl.Instance);
+                Payment_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Payment_UserControl.Instance.BringToFront();
+            Payment_UserControl.Instance.Focus();
+            menuChange(btnPayment);
+            btnPayment.BackColor = Color.RoyalBlue;
+        }
+
+        private void btnTimetable_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Timetable_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Timetable_UserControl.Instance);
+                Timetable_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Timetable_UserControl.Instance.BringToFront();
+            Timetable_UserControl.Instance.Focus();
+            menuChange(btnTimetable);
+            btnTimetable.BackColor = Color.RoyalBlue;
+        }
+
+        private void btnGroups_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Groups_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Groups_UserControl.Instance);
+                Groups_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Groups_UserControl.Instance.BringToFront();
+            Groups_UserControl.Instance.Focus();
+            menuChange(btnGroups);
+            btnGroups.BackColor = Color.RoyalBlue;
+            
+        }
+
+        private void btnDocs_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Documents_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Documents_UserControl.Instance);
+                Documents_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Documents_UserControl.Instance.BringToFront();
+            Documents_UserControl.Instance.Focus();
+            menuChange(btnDocs);
+            btnDocs.BackColor = Color.RoyalBlue;
+            
+
+        }
+        private void menuChange(Button btn)
+        {
+            foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
+            {
+                if(menuButton!= btn)
+                menuButton.BackColor = Color.MidnightBlue;
+            }
+
+
+            System.GC.Collect();
+        }
     }
 }

@@ -12,6 +12,19 @@ namespace AikidoSystem
 {
     public partial class Groups_UserControl : UserControl
     {
+        private static Groups_UserControl instance = null;
+
+        public static Groups_UserControl Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new Groups_UserControl();
+                }
+                return instance;
+            }
+        }
         public Groups_UserControl()
         {
             InitializeComponent();
