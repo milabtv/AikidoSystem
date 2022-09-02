@@ -55,26 +55,27 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_M2 = new AikidoSystem.UI.TextBox_M();
-            this.textBox_M3 = new AikidoSystem.UI.TextBox_M();
-            this.textBox_M4 = new AikidoSystem.UI.TextBox_M();
-            this.textBox_M5 = new AikidoSystem.UI.TextBox_M();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.comboBox_M1 = new AikidoSystem.UI.ComboBox_M();
-            this.button_M1 = new AikidoSystem.UI.Button_M();
-            this.button_M2 = new AikidoSystem.UI.Button_M();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox_M5 = new AikidoSystem.UI.TextBox_M();
+            this.textBox_M4 = new AikidoSystem.UI.TextBox_M();
+            this.textBox_M3 = new AikidoSystem.UI.TextBox_M();
+            this.textBox_M2 = new AikidoSystem.UI.TextBox_M();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button_M3 = new AikidoSystem.UI.Button_M();
+            this.addParticipant = new FontAwesome.Sharp.IconButton();
+            this.removeParticipant = new FontAwesome.Sharp.IconButton();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -105,7 +106,7 @@
             this.textBox_M1.BorderColor = System.Drawing.Color.RoyalBlue;
             this.textBox_M1.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.textBox_M1.BorderRadius = 0;
-            this.textBox_M1.BorderSize = 2;
+            this.textBox_M1.BorderSize = 5;
             this.textBox_M1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_M1.ForeColor = System.Drawing.Color.DimGray;
             this.textBox_M1.Location = new System.Drawing.Point(39, 89);
@@ -118,7 +119,7 @@
             this.textBox_M1.Size = new System.Drawing.Size(298, 31);
             this.textBox_M1.TabIndex = 38;
             this.textBox_M1.Texts = "";
-            this.textBox_M1.UnderlinedStyle = false;
+            this.textBox_M1.UnderlinedStyle = true;
             // 
             // panel4
             // 
@@ -463,6 +464,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel2.Controls.Add(this.button_M3);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.dataGridView1);
@@ -494,145 +496,17 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 86);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(954, 443);
+            this.panel2.Size = new System.Drawing.Size(954, 484);
             this.panel2.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 86);
-            this.panel1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(34, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Име на водещия";
-            // 
-            // textBox_M2
-            // 
-            this.textBox_M2.BackColor = System.Drawing.Color.Lavender;
-            this.textBox_M2.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M2.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M2.BorderRadius = 0;
-            this.textBox_M2.BorderSize = 2;
-            this.textBox_M2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M2.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M2.Location = new System.Drawing.Point(39, 151);
-            this.textBox_M2.Multiline = false;
-            this.textBox_M2.Name = "textBox_M2";
-            this.textBox_M2.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M2.PasswordChar = false;
-            this.textBox_M2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M2.PlaceholderText = "";
-            this.textBox_M2.Size = new System.Drawing.Size(298, 31);
-            this.textBox_M2.TabIndex = 43;
-            this.textBox_M2.Texts = "";
-            this.textBox_M2.UnderlinedStyle = false;
-            // 
-            // textBox_M3
-            // 
-            this.textBox_M3.BackColor = System.Drawing.Color.Lavender;
-            this.textBox_M3.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M3.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M3.BorderRadius = 0;
-            this.textBox_M3.BorderSize = 2;
-            this.textBox_M3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M3.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M3.Location = new System.Drawing.Point(39, 213);
-            this.textBox_M3.Multiline = false;
-            this.textBox_M3.Name = "textBox_M3";
-            this.textBox_M3.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M3.PasswordChar = false;
-            this.textBox_M3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M3.PlaceholderText = "";
-            this.textBox_M3.Size = new System.Drawing.Size(298, 31);
-            this.textBox_M3.TabIndex = 44;
-            this.textBox_M3.Texts = "";
-            this.textBox_M3.UnderlinedStyle = false;
-            // 
-            // textBox_M4
-            // 
-            this.textBox_M4.BackColor = System.Drawing.Color.Lavender;
-            this.textBox_M4.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M4.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M4.BorderRadius = 0;
-            this.textBox_M4.BorderSize = 2;
-            this.textBox_M4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M4.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M4.Location = new System.Drawing.Point(39, 275);
-            this.textBox_M4.Multiline = false;
-            this.textBox_M4.Name = "textBox_M4";
-            this.textBox_M4.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M4.PasswordChar = false;
-            this.textBox_M4.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M4.PlaceholderText = "";
-            this.textBox_M4.Size = new System.Drawing.Size(298, 31);
-            this.textBox_M4.TabIndex = 45;
-            this.textBox_M4.Texts = "";
-            this.textBox_M4.UnderlinedStyle = false;
-            // 
-            // textBox_M5
-            // 
-            this.textBox_M5.BackColor = System.Drawing.Color.Lavender;
-            this.textBox_M5.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.textBox_M5.BorderFocusColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M5.BorderRadius = 0;
-            this.textBox_M5.BorderSize = 2;
-            this.textBox_M5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_M5.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M5.Location = new System.Drawing.Point(39, 337);
-            this.textBox_M5.Multiline = false;
-            this.textBox_M5.Name = "textBox_M5";
-            this.textBox_M5.Padding = new System.Windows.Forms.Padding(7);
-            this.textBox_M5.PasswordChar = false;
-            this.textBox_M5.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.textBox_M5.PlaceholderText = "";
-            this.textBox_M5.Size = new System.Drawing.Size(298, 31);
-            this.textBox_M5.TabIndex = 46;
-            this.textBox_M5.Texts = "";
-            this.textBox_M5.UnderlinedStyle = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(351, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(591, 279);
-            this.dataGridView1.TabIndex = 47;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(348, 61);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(235, 25);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "Участвали в семинара";
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button_M2);
-            this.panel5.Controls.Add(this.button_M1);
+            this.panel5.Controls.Add(this.removeParticipant);
+            this.panel5.Controls.Add(this.addParticipant);
             this.panel5.Controls.Add(this.comboBox_M1);
             this.panel5.Location = new System.Drawing.Point(351, 375);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(591, 41);
+            this.panel5.Size = new System.Drawing.Size(591, 56);
             this.panel5.TabIndex = 49;
             // 
             // comboBox_M1
@@ -645,57 +519,195 @@
             this.comboBox_M1.IconColor = System.Drawing.Color.MidnightBlue;
             this.comboBox_M1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBox_M1.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox_M1.Location = new System.Drawing.Point(8, 3);
+            this.comboBox_M1.Location = new System.Drawing.Point(8, 13);
             this.comboBox_M1.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboBox_M1.Name = "comboBox_M1";
             this.comboBox_M1.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBox_M1.Size = new System.Drawing.Size(322, 30);
+            this.comboBox_M1.Size = new System.Drawing.Size(406, 30);
             this.comboBox_M1.TabIndex = 3;
             this.comboBox_M1.Texts = "";
             // 
-            // button_M1
+            // label2
             // 
-            this.button_M1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_M1.BackgroundColor = System.Drawing.Color.MidnightBlue;
-            this.button_M1.BorderColor = System.Drawing.Color.Pink;
-            this.button_M1.BorderRadius = 0;
-            this.button_M1.BorderSize = 0;
-            this.button_M1.FlatAppearance.BorderSize = 0;
-            this.button_M1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_M1.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_M1.ForeColor = System.Drawing.Color.Lavender;
-            this.button_M1.Location = new System.Drawing.Point(336, 3);
-            this.button_M1.Name = "button_M1";
-            this.button_M1.Size = new System.Drawing.Size(111, 30);
-            this.button_M1.TabIndex = 10;
-            this.button_M1.Text = "Въведи";
-            this.button_M1.TextColor = System.Drawing.Color.Lavender;
-            this.button_M1.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(348, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 25);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Участвали в семинара";
             // 
-            // button_M2
+            // dataGridView1
             // 
-            this.button_M2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_M2.BackgroundColor = System.Drawing.Color.MidnightBlue;
-            this.button_M2.BorderColor = System.Drawing.Color.Pink;
-            this.button_M2.BorderRadius = 0;
-            this.button_M2.BorderSize = 0;
-            this.button_M2.FlatAppearance.BorderSize = 0;
-            this.button_M2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_M2.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_M2.ForeColor = System.Drawing.Color.Lavender;
-            this.button_M2.Location = new System.Drawing.Point(453, 3);
-            this.button_M2.Name = "button_M2";
-            this.button_M2.Size = new System.Drawing.Size(111, 30);
-            this.button_M2.TabIndex = 11;
-            this.button_M2.Text = "Премахни";
-            this.button_M2.TextColor = System.Drawing.Color.Lavender;
-            this.button_M2.UseVisualStyleBackColor = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(351, 89);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(591, 279);
+            this.dataGridView1.TabIndex = 47;
+            // 
+            // textBox_M5
+            // 
+            this.textBox_M5.BackColor = System.Drawing.Color.Lavender;
+            this.textBox_M5.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.textBox_M5.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.textBox_M5.BorderRadius = 0;
+            this.textBox_M5.BorderSize = 5;
+            this.textBox_M5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_M5.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_M5.Location = new System.Drawing.Point(39, 337);
+            this.textBox_M5.Multiline = false;
+            this.textBox_M5.Name = "textBox_M5";
+            this.textBox_M5.Padding = new System.Windows.Forms.Padding(7);
+            this.textBox_M5.PasswordChar = false;
+            this.textBox_M5.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBox_M5.PlaceholderText = "";
+            this.textBox_M5.Size = new System.Drawing.Size(298, 31);
+            this.textBox_M5.TabIndex = 46;
+            this.textBox_M5.Texts = "";
+            this.textBox_M5.UnderlinedStyle = true;
+            // 
+            // textBox_M4
+            // 
+            this.textBox_M4.BackColor = System.Drawing.Color.Lavender;
+            this.textBox_M4.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.textBox_M4.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.textBox_M4.BorderRadius = 0;
+            this.textBox_M4.BorderSize = 5;
+            this.textBox_M4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_M4.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_M4.Location = new System.Drawing.Point(39, 275);
+            this.textBox_M4.Multiline = false;
+            this.textBox_M4.Name = "textBox_M4";
+            this.textBox_M4.Padding = new System.Windows.Forms.Padding(7);
+            this.textBox_M4.PasswordChar = false;
+            this.textBox_M4.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBox_M4.PlaceholderText = "";
+            this.textBox_M4.Size = new System.Drawing.Size(298, 31);
+            this.textBox_M4.TabIndex = 45;
+            this.textBox_M4.Texts = "";
+            this.textBox_M4.UnderlinedStyle = true;
+            // 
+            // textBox_M3
+            // 
+            this.textBox_M3.BackColor = System.Drawing.Color.Lavender;
+            this.textBox_M3.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.textBox_M3.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.textBox_M3.BorderRadius = 0;
+            this.textBox_M3.BorderSize = 5;
+            this.textBox_M3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_M3.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_M3.Location = new System.Drawing.Point(39, 213);
+            this.textBox_M3.Multiline = false;
+            this.textBox_M3.Name = "textBox_M3";
+            this.textBox_M3.Padding = new System.Windows.Forms.Padding(7);
+            this.textBox_M3.PasswordChar = false;
+            this.textBox_M3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBox_M3.PlaceholderText = "";
+            this.textBox_M3.Size = new System.Drawing.Size(298, 31);
+            this.textBox_M3.TabIndex = 44;
+            this.textBox_M3.Texts = "";
+            this.textBox_M3.UnderlinedStyle = true;
+            // 
+            // textBox_M2
+            // 
+            this.textBox_M2.BackColor = System.Drawing.Color.Lavender;
+            this.textBox_M2.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.textBox_M2.BorderFocusColor = System.Drawing.Color.MidnightBlue;
+            this.textBox_M2.BorderRadius = 0;
+            this.textBox_M2.BorderSize = 5;
+            this.textBox_M2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_M2.ForeColor = System.Drawing.Color.DimGray;
+            this.textBox_M2.Location = new System.Drawing.Point(39, 151);
+            this.textBox_M2.Multiline = false;
+            this.textBox_M2.Name = "textBox_M2";
+            this.textBox_M2.Padding = new System.Windows.Forms.Padding(7);
+            this.textBox_M2.PasswordChar = false;
+            this.textBox_M2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBox_M2.PlaceholderText = "";
+            this.textBox_M2.Size = new System.Drawing.Size(298, 31);
+            this.textBox_M2.TabIndex = 43;
+            this.textBox_M2.Texts = "";
+            this.textBox_M2.UnderlinedStyle = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(34, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Име на водещия";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(954, 86);
+            this.panel1.TabIndex = 5;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // button_M3
+            // 
+            this.button_M3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_M3.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.button_M3.BorderColor = System.Drawing.Color.Pink;
+            this.button_M3.BorderRadius = 0;
+            this.button_M3.BorderSize = 0;
+            this.button_M3.FlatAppearance.BorderSize = 0;
+            this.button_M3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_M3.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_M3.ForeColor = System.Drawing.Color.Lavender;
+            this.button_M3.Location = new System.Drawing.Point(377, 436);
+            this.button_M3.Name = "button_M3";
+            this.button_M3.Size = new System.Drawing.Size(200, 40);
+            this.button_M3.TabIndex = 50;
+            this.button_M3.Text = "Въведи семинар";
+            this.button_M3.TextColor = System.Drawing.Color.Lavender;
+            this.button_M3.UseVisualStyleBackColor = false;
+            // 
+            // addParticipant
+            // 
+            this.addParticipant.BackColor = System.Drawing.Color.Transparent;
+            this.addParticipant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addParticipant.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.addParticipant.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.addParticipant.IconColor = System.Drawing.Color.MidnightBlue;
+            this.addParticipant.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.addParticipant.Location = new System.Drawing.Point(442, 3);
+            this.addParticipant.Name = "addParticipant";
+            this.addParticipant.Size = new System.Drawing.Size(75, 50);
+            this.addParticipant.TabIndex = 4;
+            this.addParticipant.UseVisualStyleBackColor = false;
+            // 
+            // removeParticipant
+            // 
+            this.removeParticipant.BackColor = System.Drawing.Color.Transparent;
+            this.removeParticipant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeParticipant.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.removeParticipant.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.removeParticipant.IconColor = System.Drawing.Color.MidnightBlue;
+            this.removeParticipant.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.removeParticipant.Location = new System.Drawing.Point(501, 3);
+            this.removeParticipant.Name = "removeParticipant";
+            this.removeParticipant.Size = new System.Drawing.Size(75, 50);
+            this.removeParticipant.TabIndex = 5;
+            this.removeParticipant.UseVisualStyleBackColor = false;
             // 
             // SeminarDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 529);
+            this.ClientSize = new System.Drawing.Size(954, 570);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "SeminarDetails";
@@ -707,9 +719,9 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -753,7 +765,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel5;
         private UI.ComboBox_M comboBox_M1;
-        private UI.Button_M button_M2;
-        private UI.Button_M button_M1;
+        private UI.Button_M button_M3;
+        private FontAwesome.Sharp.IconButton addParticipant;
+        private FontAwesome.Sharp.IconButton removeParticipant;
     }
 }

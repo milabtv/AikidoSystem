@@ -11,10 +11,12 @@ using System.Windows.Forms;
 
 namespace AikidoSystem
 {
-    public partial class SeminarDetails : Form
+
+    public partial class GroupsDetails : Form
     {
+
         private int borderSize = 4;
-        public SeminarDetails(string labelText)
+        public GroupsDetails(string labelText)
         {
             InitializeComponent();
             this.Padding = new Padding(borderSize);
@@ -112,6 +114,7 @@ namespace AikidoSystem
             }
 
         }
+
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

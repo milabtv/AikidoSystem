@@ -257,6 +257,33 @@ namespace AikidoSystem
             
 
         }
+        private void btnSeminars_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Seminars_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Seminars_UserControl.Instance);
+                Seminars_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Seminars_UserControl.Instance.BringToFront();
+            Seminars_UserControl.Instance.Focus();
+            menuChange(btnSeminars);
+            btnSeminars.BackColor = Color.RoyalBlue;
+        }
+
+        private void btnLevels_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Levels_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Levels_UserControl.Instance);
+                Levels_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Levels_UserControl.Instance.BringToFront();
+            Levels_UserControl.Instance.Focus();
+            menuChange(btnLevels);
+            btnLevels.BackColor = Color.RoyalBlue;
+        }
         private void menuChange(Button btn)
         {
             foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
@@ -269,6 +296,6 @@ namespace AikidoSystem
             System.GC.Collect();
         }
 
-       
+        
     }
 }

@@ -526,7 +526,7 @@
             // 
             // textBox_M1
             // 
-            this.textBox_M1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_M1.BackColor = System.Drawing.Color.Lavender;
             this.textBox_M1.BorderColor = System.Drawing.Color.RoyalBlue;
             this.textBox_M1.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.textBox_M1.BorderRadius = 0;
@@ -547,7 +547,7 @@
             // 
             // textBox_M2
             // 
-            this.textBox_M2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_M2.BackColor = System.Drawing.Color.Lavender;
             this.textBox_M2.BorderColor = System.Drawing.Color.RoyalBlue;
             this.textBox_M2.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.textBox_M2.BorderRadius = 0;
@@ -590,7 +590,7 @@
             // 
             // textBox_M7
             // 
-            this.textBox_M7.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_M7.BackColor = System.Drawing.Color.Lavender;
             this.textBox_M7.BorderColor = System.Drawing.Color.RoyalBlue;
             this.textBox_M7.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.textBox_M7.BorderRadius = 0;
@@ -611,7 +611,7 @@
             // 
             // textBox_M3
             // 
-            this.textBox_M3.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_M3.BackColor = System.Drawing.Color.Lavender;
             this.textBox_M3.BorderColor = System.Drawing.Color.RoyalBlue;
             this.textBox_M3.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.textBox_M3.BorderRadius = 0;
@@ -654,7 +654,7 @@
             // 
             // textBox_M6
             // 
-            this.textBox_M6.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_M6.BackColor = System.Drawing.Color.Lavender;
             this.textBox_M6.BorderColor = System.Drawing.Color.RoyalBlue;
             this.textBox_M6.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.textBox_M6.BorderRadius = 0;
@@ -675,7 +675,7 @@
             // 
             // textBox_M4
             // 
-            this.textBox_M4.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_M4.BackColor = System.Drawing.Color.Lavender;
             this.textBox_M4.BorderColor = System.Drawing.Color.RoyalBlue;
             this.textBox_M4.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.textBox_M4.BorderRadius = 0;
@@ -718,7 +718,7 @@
             // 
             // textBox_M5
             // 
-            this.textBox_M5.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox_M5.BackColor = System.Drawing.Color.Lavender;
             this.textBox_M5.BorderColor = System.Drawing.Color.RoyalBlue;
             this.textBox_M5.BorderFocusColor = System.Drawing.Color.MidnightBlue;
             this.textBox_M5.BorderRadius = 0;

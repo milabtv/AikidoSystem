@@ -32,10 +32,10 @@
             this.button_M1 = new AikidoSystem.UI.Button_M();
             this.button_M2 = new AikidoSystem.UI.Button_M();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.deletePractice = new AikidoSystem.UI.Button_M();
             this.editPractice = new AikidoSystem.UI.Button_M();
             this.addPractice = new AikidoSystem.UI.Button_M();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -50,11 +50,11 @@
             this.comboBox_M1.IconColor = System.Drawing.Color.MidnightBlue;
             this.comboBox_M1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBox_M1.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox_M1.Location = new System.Drawing.Point(482, 40);
+            this.comboBox_M1.Location = new System.Drawing.Point(262, 40);
             this.comboBox_M1.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboBox_M1.Name = "comboBox_M1";
             this.comboBox_M1.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBox_M1.Size = new System.Drawing.Size(302, 30);
+            this.comboBox_M1.Size = new System.Drawing.Size(522, 30);
             this.comboBox_M1.TabIndex = 1;
             this.comboBox_M1.Texts = "";
             this.comboBox_M1.OnSelectedIndexChanged += new System.EventHandler(this.comboBox_M1_OnSelectedIndexChanged);
@@ -111,16 +111,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(851, 512);
             this.panel1.TabIndex = 4;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 93);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(736, 334);
-            this.dataGridView1.TabIndex = 5;
             // 
             // deletePractice
             // 
@@ -184,6 +174,16 @@
             this.addPractice.TextColor = System.Drawing.Color.Lavender;
             this.addPractice.UseVisualStyleBackColor = false;
             this.addPractice.Click += new System.EventHandler(this.addPractice_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(48, 93);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(736, 334);
+            this.dataGridView1.TabIndex = 5;
             // 
             // Timetable_UserControl
             // 

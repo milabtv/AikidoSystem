@@ -29,5 +29,20 @@ namespace AikidoSystem
         {
             InitializeComponent();
         }
+
+       
+
+        private void editGroup_Click(object sender, EventArgs e)
+        {
+            GroupsDetails group = new GroupsDetails("Редактиране на група");
+            group.Show();
+
+        }
+
+        private void addGroup_Click(object sender, EventArgs e)
+        {
+            GroupsDetails group = new GroupsDetails("Въвеждане на група");
+            group.Show();
+        }
     }
 }

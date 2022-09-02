@@ -47,7 +47,7 @@
             this.btnKartoteka = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnLevels = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -58,7 +58,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.btnLevels);
             this.panelMenu.Controls.Add(this.btnSeminars);
             this.panelMenu.Controls.Add(this.btnDocs);
             this.panelMenu.Controls.Add(this.iconButton6);
@@ -162,6 +162,7 @@
             this.btnSeminars.Name = "btnSeminars";
             this.btnSeminars.Tag = "Семинари";
             this.btnSeminars.UseVisualStyleBackColor = true;
+            this.btnSeminars.Click += new System.EventHandler(this.btnSeminars_Click);
             // 
             // btnDocs
             // 
@@ -266,17 +267,18 @@
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // iconButton1
+            // btnLevels
             // 
-            resources.ApplyResources(this.iconButton1, "iconButton1");
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            this.iconButton1.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Tag = "Семинари";
-            this.iconButton1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnLevels, "btnLevels");
+            this.btnLevels.FlatAppearance.BorderSize = 0;
+            this.btnLevels.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLevels.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.btnLevels.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLevels.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLevels.Name = "btnLevels";
+            this.btnLevels.Tag = "Степени на клуба";
+            this.btnLevels.UseVisualStyleBackColor = true;
+            this.btnLevels.Click += new System.EventHandler(this.btnLevels_Click);
             // 
             // Main
             // 
@@ -316,6 +318,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton btnDocs;
         private FontAwesome.Sharp.IconButton btnSeminars;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnLevels;
     }
 }

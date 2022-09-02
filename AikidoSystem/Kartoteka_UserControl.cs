@@ -42,5 +42,45 @@ namespace AikidoSystem
             Kartoteka kart = new Kartoteka("Редактиране на Картотека");
             kart.Show();            
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteKartoteka_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void printKartoteka_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showKartoteka_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

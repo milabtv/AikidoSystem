@@ -63,6 +63,18 @@
     <Compile Include="Documents_UserControl.Designer.cs">
       <DependentUpon>Documents_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exams.Designer.cs">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupsDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupsDetails.Designer.cs">
+      <DependentUpon>GroupsDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Groups_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +104,12 @@
     </Compile>
     <Compile Include="Kartoteka_UserControl.Designer.cs">
       <DependentUpon>Kartoteka_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Levels_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Levels_UserControl.Designer.cs">
+      <DependentUpon>Levels_UserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -187,6 +205,12 @@
     <EmbeddedResource Include="Documents_UserControl.resx">
       <DependentUpon>Documents_UserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Exams.resx">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupsDetails.resx">
+      <DependentUpon>GroupsDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Groups_UserControl.resx">
       <DependentUpon>Groups_UserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kartoteka_UserControl.resx">
       <DependentUpon>Kartoteka_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Levels_UserControl.resx">
+      <DependentUpon>Levels_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
