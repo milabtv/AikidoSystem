@@ -38,6 +38,7 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btvMaximize = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.btnSeminars = new FontAwesome.Sharp.IconButton();
             this.btnDocs = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.btnGroups = new FontAwesome.Sharp.IconButton();
@@ -46,6 +47,7 @@
             this.btnKartoteka = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -56,6 +58,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.btnSeminars);
             this.panelMenu.Controls.Add(this.btnDocs);
             this.panelMenu.Controls.Add(this.iconButton6);
             this.panelMenu.Controls.Add(this.btnGroups);
@@ -147,6 +151,18 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnSeminars
+            // 
+            resources.ApplyResources(this.btnSeminars, "btnSeminars");
+            this.btnSeminars.FlatAppearance.BorderSize = 0;
+            this.btnSeminars.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.btnSeminars.IconChar = FontAwesome.Sharp.IconChar.PeopleLine;
+            this.btnSeminars.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.btnSeminars.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSeminars.Name = "btnSeminars";
+            this.btnSeminars.Tag = "Семинари";
+            this.btnSeminars.UseVisualStyleBackColor = true;
+            // 
             // btnDocs
             // 
             resources.ApplyResources(this.btnDocs, "btnDocs");
@@ -217,7 +233,7 @@
             resources.ApplyResources(this.btnKartoteka, "btnKartoteka");
             this.btnKartoteka.FlatAppearance.BorderSize = 0;
             this.btnKartoteka.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnKartoteka.IconChar = FontAwesome.Sharp.IconChar.ListOl;
+            this.btnKartoteka.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.btnKartoteka.IconColor = System.Drawing.Color.LightSteelBlue;
             this.btnKartoteka.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnKartoteka.Name = "btnKartoteka";
@@ -249,6 +265,18 @@
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // iconButton1
+            // 
+            resources.ApplyResources(this.iconButton1, "iconButton1");
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.iconButton1.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Tag = "Семинари";
+            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -287,5 +315,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private FontAwesome.Sharp.IconButton btnDocs;
+        private FontAwesome.Sharp.IconButton btnSeminars;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

@@ -37,12 +37,14 @@ namespace AikidoSystem
 
         private void addPractice_Click(object sender, EventArgs e)
         {
-
+            Practice practice = new Practice("Добавяне на тренировка");
+            practice.Show();
         }
 
         private void editPractice_Click(object sender, EventArgs e)
         {
-
+            Practice practice = new Practice("Редактиране на тренировка");
+            practice.Show();
         }
 
         private void deletePractice_Click(object sender, EventArgs e)
