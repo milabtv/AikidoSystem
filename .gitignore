@@ -361,3 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/AikidoSystem/AikidoDataDataSet1.xss
+/AikidoSystem/AikidoDataDataSet1.xsd
+/AikidoSystem/AikidoDataDataSet1.xsc
+/AikidoSystem/AikidoDataDataSet1.Designer.cs
+/AikidoSystem/AikidoDataDataSet.xss
+/AikidoSystem/AikidoDataDataSet.xsd
+/AikidoSystem/AikidoDataDataSet.xsc
+/AikidoSystem/AikidoDataDataSet.Designer.cs
+/AikidoSystem/AikidoDataDataSet.cs
