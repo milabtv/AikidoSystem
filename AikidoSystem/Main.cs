@@ -14,6 +14,10 @@ namespace AikidoSystem
     public partial class Main : Form
     {
         private int borderSize = 4;
+        private string status;
+
+        public string Status { get => status; set => status = value; }
+
         public Main()
         {
             InitializeComponent();
@@ -284,6 +288,19 @@ namespace AikidoSystem
             menuChange(btnLevels);
             btnLevels.BackColor = Color.RoyalBlue;
         }
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (!panelDesktop.Controls.Contains(Admin_UserControl.Instance))
+            {
+                panelDesktop.Controls.Add(Admin_UserControl.Instance);
+                Admin_UserControl.Instance.Dock = DockStyle.Fill;
+            }
+
+            Admin_UserControl.Instance.BringToFront();
+            Admin_UserControl.Instance.Focus();
+            menuChange(iconButton1);
+            iconButton1.BackColor = Color.RoyalBlue;
+        }
         private void menuChange(Button btn)
         {
             foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
@@ -296,6 +313,9 @@ namespace AikidoSystem
             System.GC.Collect();
         }
 
-        
+        private void Main_Load(object sender, EventArgs e)
+        {
+            if (status == "trainer" ||status != "admin") iconButton1.Visible = false;
+        }
     }
 }

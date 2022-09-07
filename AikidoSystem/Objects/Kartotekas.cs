@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AikidoSystem.Objects
 {
-    internal class Kartoteka
+    internal class Kartotekas
     {
         private string firstName;
         private string middleName;
@@ -15,7 +15,7 @@ namespace AikidoSystem.Objects
         private string egn;
         private string phoneNumber;
         private string addres;
-        public Kartoteka()
+        public Kartotekas()
         {
             this.firstName = "";
             this.middleName = "";
@@ -26,7 +26,7 @@ namespace AikidoSystem.Objects
             this.addres = "";
         }
 
-        public Kartoteka(string firstName, string middleName, string lastName, string email, string egn, string phoneNumber, string address)
+        public Kartotekas(string firstName, string middleName, string lastName, string email, string egn, string phoneNumber, string address)
         {
             this.firstName = firstName;
             this.middleName = middleName;

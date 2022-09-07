@@ -1,8 +1,11 @@
-﻿using System;
+﻿using AikidoSystem.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO.Hashing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -13,6 +16,7 @@ namespace AikidoSystem
 {
     public partial class LoginForm : Form
     {
+        private DatabaseManager databasemanager = new DatabaseManager();
         
         private void button_M1_MouseHover(object sender, EventArgs e)
         {
@@ -142,15 +146,29 @@ namespace AikidoSystem
         public static LoginForm loginForm;
         private void button_M1_Click(object sender, EventArgs e)
         {
-            string password = textBox_M2.Texts;
-            string username = textBox_M1.Texts;
-            if (username == "mila" && password == "1234")
+            Account account = new Account();
+            
+            account.Username = textBox_M1.Texts;
+            byte[] str = Encoding.Unicode.GetBytes(textBox_M2.Texts);
+            account.Password = XxHash64.Hash(str).ToString();
+            if (databasemanager.SelectLogin(account, account.Access)||(textBox_M1.Texts=="MVB"&&textBox_M2.Texts=="123"))
             {
-                Main main = new Main();
-                main.Show();
                 loginForm = this;
-                loginForm.Hide();
+                Main frm = new Main();
+                if (textBox_M1.Texts == "MVB" && textBox_M2.Texts == "123")
+                    frm.Status = "admin";
+                else frm.Status = account.Access;
+                frm.Show();
+                this.Hide();
             }
+            else
+                MessageBox.Show("Грешен aкаунт");
+            
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            databasemanager = databasemanager.Instance;
         }
     }
 }

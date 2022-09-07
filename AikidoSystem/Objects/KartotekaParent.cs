@@ -14,9 +14,9 @@ namespace AikidoSystem.Objects
         private string email;
         private string phoneNumber;
         private string address;
-        private Kartoteka kartoteka;
+        private Kartotekas kartoteka;
                 
-        public KartotekaParent(string firstName, string middleName, string lastName, string email, string phoneNumber, string addres, Kartoteka kartoteka)
+        public KartotekaParent(string firstName, string middleName, string lastName, string email, string phoneNumber, string addres, Kartotekas kartoteka)
         {
             this.firstName = firstName;
             this.middleName = middleName;
@@ -34,7 +34,7 @@ namespace AikidoSystem.Objects
             this.email = "";
             this.phoneNumber = "";
             this.address = "";
-            this.kartoteka = new Kartoteka();
+            this.kartoteka = new Kartotekas();
         }
 
         public string FirstName { get => firstName; set => firstName = value; }
@@ -43,6 +43,6 @@ namespace AikidoSystem.Objects
         public string Email { get => email; set => email = value; }
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
         public string Address { get => address; set => address = value; }
-        internal Kartoteka Kartoteka { get => kartoteka; set => kartoteka = value; }
+        internal Kartotekas Kartoteka { get => kartoteka; set => kartoteka = value; }
     }
 }

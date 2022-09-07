@@ -57,7 +57,23 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Hashing, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Hashing.6.0.1\lib\net461\System.IO.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -72,25 +88,26 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objects\Account.cs" />
+    <Compile Include="SettingsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsManagement.Designer.cs">
+      <DependentUpon>SettingsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin_UserControl.Designer.cs">
+      <DependentUpon>Admin_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="AikiDataDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AikiDataDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AikidoDataDataSet.cs">
-      <DependentUpon>AikidoDataDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="AikidoDataDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AikidoDataDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="AikidoDataDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AikidoDataDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="DatabaseManager.cs" />
     <Compile Include="Documents_UserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,7 +178,7 @@
     <Compile Include="Objects\Group.cs" />
     <Compile Include="Objects\GroupList.cs" />
     <Compile Include="Objects\Hall.cs" />
-    <Compile Include="Objects\Kartoteka.cs" />
+    <Compile Include="Objects\Kartotekas.cs" />
     <Compile Include="Objects\KartotekaParent.cs" />
     <Compile Include="Objects\KyuLevels.cs" />
     <Compile Include="Objects\levelType.cs" />
@@ -174,6 +191,12 @@
     </Compile>
     <Compile Include="Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentManagement.Designer.cs">
+      <DependentUpon>PaymentManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Payment_UserControl.cs">
       <SubType>UserControl</SubType>
@@ -236,6 +259,12 @@
     <Compile Include="UI\ToggleButton_M.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="SettingsManagement.resx">
+      <DependentUpon>SettingsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_UserControl.resx">
+      <DependentUpon>Admin_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents_UserControl.resx">
       <DependentUpon>Documents_UserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +304,9 @@
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentManagement.resx">
+      <DependentUpon>PaymentManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payment_UserControl.resx">
       <DependentUpon>Payment_UserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,28 +345,6 @@
     </None>
     <None Include="AikiDataDataSet.xss">
       <DependentUpon>AikiDataDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AikidoDataDataSet.xsc">
-      <DependentUpon>AikidoDataDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AikidoDataDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AikidoDataDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AikidoDataDataSet.xss">
-      <DependentUpon>AikidoDataDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AikidoDataDataSet1.xsc">
-      <DependentUpon>AikidoDataDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="AikidoDataDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AikidoDataDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AikidoDataDataSet1.xss">
-      <DependentUpon>AikidoDataDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\.editorconfig" />
@@ -398,6 +408,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AikiData.mdf</DependentUpon>
     </Content>
+    <Content Include="SQL\CreateTables.sql" />
+    <Content Include="SQL\SQLQuery3.sql" />
+    <Content Include="SQL\Triggers.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

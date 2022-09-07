@@ -12,10 +12,11 @@ namespace AikidoSystem.Objects
         private string name;
         private string levelType;
 
-        public KyuLevels(int id, string name)
+        public KyuLevels(int id, string name, string levelType)
         {
             this.id = id;
             this.name = name;
+            LevelType = levelType;
         }
         public KyuLevels()
         {
@@ -25,8 +26,6 @@ namespace AikidoSystem.Objects
 
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
-
-        
-
+        public string LevelType { get => levelType; set => levelType = value; }
     }
 }

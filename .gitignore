@@ -262,7 +262,6 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
-*.mdf
 *.ldf
 *.ndf
 
@@ -370,3 +369,4 @@ FodyWeavers.xsd
 /AikidoSystem/AikidoDataDataSet.xsc
 /AikidoSystem/AikidoDataDataSet.Designer.cs
 /AikidoSystem/AikidoDataDataSet.cs
+/AikidoSystem/Database/AikiData.mdf

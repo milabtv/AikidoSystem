@@ -8,17 +8,17 @@ namespace AikidoSystem.Objects
 {
     internal class GroupList
     {
-        private List<Kartoteka> kartotekaList;
+        private List<Kartotekas> kartotekaList;
         private Group group;
 
-        public GroupList(List<Kartoteka> kartotekaList, Group group)
+        public GroupList(List<Kartotekas> kartotekaList, Group group)
         {
             this.kartotekaList = kartotekaList;
             this.group = group;
         }
         public GroupList()
         {
-            this.kartotekaList = new List<Kartoteka>();
+            this.kartotekaList = new List<Kartotekas>();
             this.group = new Group();
         }
     }
