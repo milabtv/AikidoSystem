@@ -13,6 +13,7 @@ namespace AikidoSystem
 {
     sealed class DatabaseManager : IDisposable
     {
+        
         private static DatabaseManager instance = null;
         private string connectionString;
         private SqlConnection connection;
@@ -123,7 +124,7 @@ namespace AikidoSystem
             SqlDataAdapter adpt = new SqlDataAdapter(selectquery, connection);
             DataTable table = new DataTable();
             adpt.Fill(table);
-
+            adpt.Dispose();
             return table;
         }
         public string SelectLogin(Account account)
@@ -141,13 +142,14 @@ namespace AikidoSystem
                 {
                     result = reader1.GetValue(0).ToString();
                 }
+                reader1.Close();
             }
 
             catch (Exception)
             {
                 result = null;
             }
-
+            
             return result;
         }
 
@@ -311,6 +313,7 @@ namespace AikidoSystem
             SqlDataAdapter adpt = new SqlDataAdapter(selectquery, connection);
             DataTable table = new DataTable();
             adpt.Fill(table);
+            adpt.Dispose();
 
             return table;
         }
@@ -385,13 +388,14 @@ namespace AikidoSystem
         }
         public DataTable SelectPaymentType()
         {
+         
             SqlCommand cmd = new SqlCommand("SELECT * FROM PaymentType", connection);
             cmd.CommandType = CommandType.Text;
             string selectquery = "SELECT * FROM PaymentType";
             SqlDataAdapter adpt = new SqlDataAdapter(selectquery, connection);
             DataTable table = new DataTable();
             adpt.Fill(table);
-
+           
             return table;
         }
 
@@ -478,10 +482,10 @@ namespace AikidoSystem
         }
         public DataTable SelectKartoteki(string str)
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Kartoteki WHERE First_name LIKE str OR Last_name LIKE str", connection);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Kartoteki WHERE First_name LIKE str OR Last_name LIKE @str", connection);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@str", str);
-            string selectquery = "SELECT * FROM Kartoteki WHERE First_name LIKE str OR Last_name LIKE str";
+            string selectquery = "SELECT * FROM Kartoteki WHERE First_name LIKE str OR Last_name LIKE @str";
             SqlDataAdapter adpt = new SqlDataAdapter(selectquery, connection);
             DataTable table = new DataTable();
             adpt.Fill(table);
@@ -658,10 +662,10 @@ namespace AikidoSystem
         }
         public DataTable SelectPart(string str)
         {
-            SqlCommand cmd = new SqlCommand("SELECT Kartoteki.First_name,Kartoteki.Last_Name,Seminars.Instructor_name,Seminars.City,Seminars.Start_Date,Seminars.End_date FROM (Seminars JOIN SeminarsParticipation ON SeminarsParticipation.Seminar = Seminars.ID) JOIN Kartoteki ON SeminarsParticipation.Kartoteka = Kartoteka.EGN", connection);
+            SqlCommand cmd = new SqlCommand("SELECT Kartoteki.First_name,Kartoteki.Last_Name,Seminars.Instructor_name,Seminars.City,Seminars.Start_Date,Seminars.End_date FROM (Seminars JOIN SeminarParticipation ON SeminarParticipation.Seminar = Seminars.ID) JOIN Kartoteki ON SeminarParticipation.Kartoteka = Kartoteki.EGN", connection);
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@str", str);
-            string selectquery = "SELECT Kartoteki.First_name,Kartoteki.Last_Name,Seminars.Instructor_name,Seminars.City,Seminars.Start_Date,Seminars.End_date FROM (Seminars JOIN SeminarsParticipation ON SeminarsParticipation.Seminar = Seminars.ID) JOIN Kartoteki ON SeminarsParticipation.Kartoteka = Kartoteka.EGN";
+            string selectquery = "SELECT Kartoteki.First_name,Kartoteki.Last_Name,Seminars.Instructor_name,Seminars.City,Seminars.Start_Date,Seminars.End_date FROM (Seminars JOIN SeminarParticipation ON SeminarParticipation.Seminar = Seminars.ID) JOIN Kartoteki ON SeminarParticipation.Kartoteka = Kartoteki.EGN";
             SqlDataAdapter adpt = new SqlDataAdapter(selectquery, connection);
             DataTable table = new DataTable();
             adpt.Fill(table);
@@ -788,10 +792,12 @@ namespace AikidoSystem
         }
         public DataTable SelectPayment(string str)
         {
-            SqlCommand cmd = new SqlCommand("SELECT Kartoteki.First_name,Kartoteki.Last_name,PaymentType.Payment_name,Payment.Pay_month,Payment.Pay_date FROM ((Kartoteki JOIN Payment ON Kartoteki.EGN = Payment.Kartoteka) JOIN PaymentDetails ON Payment.ID = PaymentDetails.Payment) JOIN PaymentType ON PaymentDetails.Payment_type = PaymentType.ID", connection);
-            cmd.CommandType = CommandType.Text;
 
-            string selectquery = "SELECT Kartoteki.First_name,Kartoteki.Last_name,PaymentType.Payment_name,Payment.Pay_month,Payment.Pay_date FROM ((Kartoteki JOIN Payment ON Kartoteki.EGN = Payment.Kartoteka) JOIN PaymentDetails ON Payment.ID = PaymentDetails.Payment) JOIN PaymentType ON PaymentDetails.Payment_type = PaymentType.ID ";
+            SqlCommand cmd = new SqlCommand("SELECT Kartoteki.First_name,Kartoteki.Last_name,PaymentType.Payment_name,Payment.Pay_month,Payment.Pay_date FROM ((Kartoteki JOIN Payment ON Kartoteki.EGN = Payment.Kartoteka) JOIN PaymentDetails ON Payment.ID = PaymentDetails.Payment) JOIN PaymentType ON PaymentDetails.Payment_type = PaymentType.ID WHERE Kartoteki.First_name = @str", connection);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@str", str);
+
+            string selectquery = "SELECT Kartoteki.First_name,Kartoteki.Last_name,PaymentType.Payment_name,Payment.Pay_month,Payment.Pay_date FROM ((Kartoteki JOIN Payment ON Kartoteki.EGN = Payment.Kartoteka) JOIN PaymentDetails ON Payment.ID = PaymentDetails.Payment) JOIN PaymentType ON PaymentDetails.Payment_type = PaymentType.ID WHERE Kartoteki.First_name LIKE '"+str+"'";
             SqlDataAdapter adpt = new SqlDataAdapter(selectquery, connection);
             DataTable table = new DataTable();
             adpt.Fill(table);

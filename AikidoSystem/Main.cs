@@ -203,6 +203,7 @@ namespace AikidoSystem
             Payment_UserControl.Instance.Focus();
             menuChange(btnPayment);
             btnPayment.BackColor = Color.RoyalBlue;
+
         }
 
         private void btnTimetable_Click(object sender, EventArgs e)
@@ -290,6 +291,11 @@ namespace AikidoSystem
         private void Main_Load(object sender, EventArgs e)
         {
             if (status == "trainer" ||status != "admin") iconButton1.Visible = false;
+            DatabaseManager database = new DatabaseManager();
+            database = database.Instance;
+
+            DataTable dt = database.SelectPayment(" ");
+            dataGridView1.DataSource = dt;
         }
     }
 }

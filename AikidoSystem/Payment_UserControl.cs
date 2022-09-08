@@ -53,7 +53,11 @@ namespace AikidoSystem
 
         private void showKartoteka_Click(object sender, EventArgs e)
         {
+            DatabaseManager database = new DatabaseManager();
+            database = database.Instance;
 
+            DataTable dt = database.SelectPayment(textBox_M1.Texts);
+            dataGridView1.DataSource = dt;
         }
 
         private void Payment_UserControl_Load(object sender, EventArgs e)
@@ -62,6 +66,7 @@ namespace AikidoSystem
             database = database.Instance;
 
             DataTable dt = database.SelectPayment(textBox_M1.Texts);
+            dataGridView1.DataSource = dt;
         }
     }
 }

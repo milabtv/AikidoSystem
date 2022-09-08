@@ -44,11 +44,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Lavender;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(64, 114);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(736, 334);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(981, 411);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // deleteKartoteka
             // 
@@ -62,14 +63,14 @@
             this.deleteKartoteka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteKartoteka.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteKartoteka.ForeColor = System.Drawing.Color.Lavender;
-            this.deleteKartoteka.Location = new System.Drawing.Point(362, 454);
+            this.deleteKartoteka.Location = new System.Drawing.Point(483, 559);
+            this.deleteKartoteka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteKartoteka.Name = "deleteKartoteka";
-            this.deleteKartoteka.Size = new System.Drawing.Size(151, 30);
+            this.deleteKartoteka.Size = new System.Drawing.Size(201, 37);
             this.deleteKartoteka.TabIndex = 16;
             this.deleteKartoteka.Text = "Изтрий";
             this.deleteKartoteka.TextColor = System.Drawing.Color.Lavender;
             this.deleteKartoteka.UseVisualStyleBackColor = false;
-            this.deleteKartoteka.Click += new System.EventHandler(this.deleteKartoteka_Click);
             // 
             // editKartoteka
             // 
@@ -83,9 +84,10 @@
             this.editKartoteka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editKartoteka.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editKartoteka.ForeColor = System.Drawing.Color.Lavender;
-            this.editKartoteka.Location = new System.Drawing.Point(205, 454);
+            this.editKartoteka.Location = new System.Drawing.Point(273, 559);
+            this.editKartoteka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editKartoteka.Name = "editKartoteka";
-            this.editKartoteka.Size = new System.Drawing.Size(151, 30);
+            this.editKartoteka.Size = new System.Drawing.Size(201, 37);
             this.editKartoteka.TabIndex = 15;
             this.editKartoteka.Text = "Редактирай";
             this.editKartoteka.TextColor = System.Drawing.Color.Lavender;
@@ -104,9 +106,10 @@
             this.addKartoteka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addKartoteka.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addKartoteka.ForeColor = System.Drawing.Color.Lavender;
-            this.addKartoteka.Location = new System.Drawing.Point(48, 454);
+            this.addKartoteka.Location = new System.Drawing.Point(64, 559);
+            this.addKartoteka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addKartoteka.Name = "addKartoteka";
-            this.addKartoteka.Size = new System.Drawing.Size(151, 30);
+            this.addKartoteka.Size = new System.Drawing.Size(201, 37);
             this.addKartoteka.TabIndex = 14;
             this.addKartoteka.Text = "Добави Нов";
             this.addKartoteka.TextColor = System.Drawing.Color.Lavender;
@@ -122,14 +125,15 @@
             this.textBox_M1.BorderSize = 2;
             this.textBox_M1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_M1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.textBox_M1.Location = new System.Drawing.Point(214, 40);
+            this.textBox_M1.Location = new System.Drawing.Point(285, 49);
+            this.textBox_M1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_M1.Multiline = false;
             this.textBox_M1.Name = "textBox_M1";
-            this.textBox_M1.Padding = new System.Windows.Forms.Padding(7);
+            this.textBox_M1.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.textBox_M1.PasswordChar = false;
             this.textBox_M1.PlaceholderColor = System.Drawing.Color.CornflowerBlue;
             this.textBox_M1.PlaceholderText = "Търсене";
-            this.textBox_M1.Size = new System.Drawing.Size(570, 31);
+            this.textBox_M1.Size = new System.Drawing.Size(760, 39);
             this.textBox_M1.TabIndex = 7;
             this.textBox_M1.Texts = "";
             this.textBox_M1.UnderlinedStyle = false;
@@ -145,14 +149,14 @@
             this.showKartoteka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.showKartoteka.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showKartoteka.ForeColor = System.Drawing.Color.Lavender;
-            this.showKartoteka.Location = new System.Drawing.Point(48, 40);
+            this.showKartoteka.Location = new System.Drawing.Point(64, 49);
+            this.showKartoteka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.showKartoteka.Name = "showKartoteka";
-            this.showKartoteka.Size = new System.Drawing.Size(151, 30);
+            this.showKartoteka.Size = new System.Drawing.Size(201, 37);
             this.showKartoteka.TabIndex = 6;
             this.showKartoteka.Text = "Покажи";
             this.showKartoteka.TextColor = System.Drawing.Color.Lavender;
             this.showKartoteka.UseVisualStyleBackColor = false;
-            this.showKartoteka.Click += new System.EventHandler(this.showKartoteka_Click);
             // 
             // panel1
             // 
@@ -164,19 +168,21 @@
             this.panel1.Controls.Add(this.textBox_M1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(851, 512);
+            this.panel1.Size = new System.Drawing.Size(1135, 630);
             this.panel1.TabIndex = 17;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Kartoteka_UserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Kartoteka_UserControl";
-            this.Size = new System.Drawing.Size(851, 512);
+            this.Size = new System.Drawing.Size(1135, 630);
+            this.Load += new System.EventHandler(this.Kartoteka_UserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

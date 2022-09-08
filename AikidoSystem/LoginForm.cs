@@ -162,6 +162,7 @@ namespace AikidoSystem
                     frm.Status = "admin";
                 else frm.Status = account.Access;
                 frm.Show();
+                databasemanager.Dispose();
                 this.Hide();
             }
             else
