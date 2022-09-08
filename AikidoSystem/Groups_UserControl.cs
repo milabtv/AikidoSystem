@@ -44,5 +44,10 @@ namespace AikidoSystem
             GroupsDetails group = new GroupsDetails("Въвеждане на група");
             group.Show();
         }
+
+        private void Groups_UserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

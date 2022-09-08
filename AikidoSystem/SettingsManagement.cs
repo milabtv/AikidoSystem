@@ -225,8 +225,8 @@ namespace AikidoSystem
                      flag = true;
                     
                     account.Username = textBox_M1.Texts;
-                    byte[] str = Encoding.Unicode.GetBytes(textBox_M2.Texts);
-                    account.Password = XxHash64.Hash(str).ToString();
+                    //byte[] str = Encoding.Unicode.GetBytes(textBox_M2.Texts);
+                    account.Password = Encoding.Unicode.GetString(XxHash64.Hash(Encoding.Unicode.GetBytes(textBox_M2.Texts)));
                     if (toggle1.Checked)
                         account.Access = "admin";
                     else account.Access = "trainer";
@@ -384,8 +384,7 @@ namespace AikidoSystem
 
                     paymentType.TypeName = textBox_M1.Texts;
                     paymentType.Price = double.Parse(textBox_M2.Texts);
-                    pay.TypeName = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-
+                    
                     while (flag)
                     {
                         if (databaseManager.UpdatePaymentType(paymentType, pay))
@@ -474,9 +473,11 @@ namespace AikidoSystem
 
                     if (databaseManager.DeleteAccount(account))
                     {
+                        MessageBox.Show("Акаунтът е изтрит!");
                         DataTable dt = new DataTable();
                         dt = databaseManager.SelectAccounts();
                         dataGridView1.DataSource = dt;
+                        
                     }
                     else MessageBox.Show("Акаунтът не е изтрит!");
                     
@@ -485,15 +486,16 @@ namespace AikidoSystem
                 case "payment":
                     PaymentType payType = new PaymentType();
 
-                    payType.TypeName = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                    //byte[] str = Encoding.Unicode.GetBytes(dataGridView1.CurrentRow.Cells[1].Value.ToString());
-                    //account.Password = XxHash64.Hash(str).ToString();
+                    payType.Id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                    
 
                     if (databaseManager.DeletePaymentType(payType))
                     {
+                        MessageBox.Show("Записът е изтрит!");
                         DataTable dt = new DataTable();
                         dt = databaseManager.SelectPaymentType();
                         dataGridView1.DataSource = dt;
+                        
                     }
                     else MessageBox.Show("Записът не е изтрит!");
                     
@@ -501,12 +503,12 @@ namespace AikidoSystem
                 case "hall":
                     Hall hall = new Hall();
 
-                    hall.Name = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                    //byte[] str = Encoding.Unicode.GetBytes(dataGridView1.CurrentRow.Cells[1].Value.ToString());
-                    //account.Password = XxHash64.Hash(str).ToString();
+                    hall.Id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                 
 
                     if (databaseManager.DeleteHalls(hall))
                     {
+                        MessageBox.Show("Записът е изтрит!");
                         DataTable dt = new DataTable();
                         dt = databaseManager.SelectHalls();
                         dataGridView1.DataSource = dt;
@@ -516,12 +518,12 @@ namespace AikidoSystem
                 case "levels":
                     KyuLevels level = new KyuLevels();
 
-                    level.Name = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                    //byte[] str = Encoding.Unicode.GetBytes(dataGridView1.CurrentRow.Cells[1].Value.ToString());
-                    //account.Password = XxHash64.Hash(str).ToString();
+                    level.Id = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                   
 
                     if (databaseManager.DeleteLevels(level))
                     {
+                        MessageBox.Show("Записът е изтрит!");
                         DataTable dt = new DataTable();
                         dt = databaseManager.SelectLevels();
                         dataGridView1.DataSource = dt;

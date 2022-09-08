@@ -35,7 +35,6 @@
             this.showKartoteka = new AikidoSystem.UI.Button_M();
             this.addExam = new AikidoSystem.UI.Button_M();
             this.textBox_M1 = new AikidoSystem.UI.TextBox_M();
-            this.printKartoteka = new AikidoSystem.UI.Button_M();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +48,6 @@
             this.panel1.Controls.Add(this.showKartoteka);
             this.panel1.Controls.Add(this.addExam);
             this.panel1.Controls.Add(this.textBox_M1);
-            this.panel1.Controls.Add(this.printKartoteka);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -168,25 +166,6 @@
             this.textBox_M1.Texts = "";
             this.textBox_M1.UnderlinedStyle = false;
             // 
-            // printKartoteka
-            // 
-            this.printKartoteka.BackColor = System.Drawing.Color.RoyalBlue;
-            this.printKartoteka.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.printKartoteka.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.printKartoteka.BorderRadius = 0;
-            this.printKartoteka.BorderSize = 0;
-            this.printKartoteka.FlatAppearance.BorderSize = 0;
-            this.printKartoteka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.printKartoteka.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printKartoteka.ForeColor = System.Drawing.Color.Lavender;
-            this.printKartoteka.Location = new System.Drawing.Point(633, 454);
-            this.printKartoteka.Name = "printKartoteka";
-            this.printKartoteka.Size = new System.Drawing.Size(151, 30);
-            this.printKartoteka.TabIndex = 13;
-            this.printKartoteka.Text = "Притирай";
-            this.printKartoteka.TextColor = System.Drawing.Color.Lavender;
-            this.printKartoteka.UseVisualStyleBackColor = false;
-            // 
             // Levels_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +188,5 @@
         private UI.Button_M showKartoteka;
         private UI.Button_M addExam;
         private UI.TextBox_M textBox_M1;
-        private UI.Button_M printKartoteka;
     }
 }

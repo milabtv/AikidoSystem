@@ -30,10 +30,8 @@
         {
             this.comboBox_M1 = new AikidoSystem.UI.ComboBox_M();
             this.button_M1 = new AikidoSystem.UI.Button_M();
-            this.button_M2 = new AikidoSystem.UI.Button_M();
             this.panel1 = new System.Windows.Forms.Panel();
             this.deletePractice = new AikidoSystem.UI.Button_M();
-            this.editPractice = new AikidoSystem.UI.Button_M();
             this.addPractice = new AikidoSystem.UI.Button_M();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -78,33 +76,12 @@
             this.button_M1.TextColor = System.Drawing.Color.Lavender;
             this.button_M1.UseVisualStyleBackColor = false;
             // 
-            // button_M2
-            // 
-            this.button_M2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button_M2.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.button_M2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button_M2.BorderRadius = 0;
-            this.button_M2.BorderSize = 0;
-            this.button_M2.FlatAppearance.BorderSize = 0;
-            this.button_M2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_M2.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_M2.ForeColor = System.Drawing.Color.Lavender;
-            this.button_M2.Location = new System.Drawing.Point(633, 454);
-            this.button_M2.Name = "button_M2";
-            this.button_M2.Size = new System.Drawing.Size(151, 30);
-            this.button_M2.TabIndex = 3;
-            this.button_M2.Text = "Притирай";
-            this.button_M2.TextColor = System.Drawing.Color.Lavender;
-            this.button_M2.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.deletePractice);
-            this.panel1.Controls.Add(this.editPractice);
             this.panel1.Controls.Add(this.addPractice);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.comboBox_M1);
-            this.panel1.Controls.Add(this.button_M2);
             this.panel1.Controls.Add(this.button_M1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -124,7 +101,7 @@
             this.deletePractice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deletePractice.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deletePractice.ForeColor = System.Drawing.Color.Lavender;
-            this.deletePractice.Location = new System.Drawing.Point(362, 454);
+            this.deletePractice.Location = new System.Drawing.Point(205, 454);
             this.deletePractice.Name = "deletePractice";
             this.deletePractice.Size = new System.Drawing.Size(151, 30);
             this.deletePractice.TabIndex = 19;
@@ -132,27 +109,6 @@
             this.deletePractice.TextColor = System.Drawing.Color.Lavender;
             this.deletePractice.UseVisualStyleBackColor = false;
             this.deletePractice.Click += new System.EventHandler(this.deletePractice_Click);
-            // 
-            // editPractice
-            // 
-            this.editPractice.BackColor = System.Drawing.Color.RoyalBlue;
-            this.editPractice.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.editPractice.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.editPractice.BorderRadius = 0;
-            this.editPractice.BorderSize = 0;
-            this.editPractice.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.editPractice.FlatAppearance.BorderSize = 0;
-            this.editPractice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editPractice.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editPractice.ForeColor = System.Drawing.Color.Lavender;
-            this.editPractice.Location = new System.Drawing.Point(205, 454);
-            this.editPractice.Name = "editPractice";
-            this.editPractice.Size = new System.Drawing.Size(151, 30);
-            this.editPractice.TabIndex = 18;
-            this.editPractice.Text = "Редактирай";
-            this.editPractice.TextColor = System.Drawing.Color.Lavender;
-            this.editPractice.UseVisualStyleBackColor = false;
-            this.editPractice.Click += new System.EventHandler(this.editPractice_Click);
             // 
             // addPractice
             // 
@@ -202,11 +158,9 @@
         #endregion
         private UI.ComboBox_M comboBox_M1;
         private UI.Button_M button_M1;
-        private UI.Button_M button_M2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private UI.Button_M deletePractice;
-        private UI.Button_M editPractice;
         private UI.Button_M addPractice;
     }
 }

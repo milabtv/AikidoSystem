@@ -174,17 +174,16 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Objects\Exams.cs" />
+    <Compile Include="Objects\Exam.cs" />
     <Compile Include="Objects\Group.cs" />
-    <Compile Include="Objects\GroupList.cs" />
     <Compile Include="Objects\Hall.cs" />
     <Compile Include="Objects\Kartotekas.cs" />
     <Compile Include="Objects\KartotekaParent.cs" />
     <Compile Include="Objects\KyuLevels.cs" />
     <Compile Include="Objects\levelType.cs" />
-    <Compile Include="Objects\Payment.cs" />
+    <Compile Include="Objects\Payments.cs" />
     <Compile Include="Objects\PaymentType.cs" />
-    <Compile Include="Objects\Practice.cs" />
+    <Compile Include="Objects\Practices.cs" />
     <Compile Include="Objects\Seminar.cs" />
     <Compile Include="Payment.cs">
       <SubType>Form</SubType>

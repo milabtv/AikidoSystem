@@ -149,10 +149,13 @@ namespace AikidoSystem
             Account account = new Account();
             
             account.Username = textBox_M1.Texts;
-            byte[] str = Encoding.Unicode.GetBytes(textBox_M2.Texts);
-            account.Password = XxHash64.Hash(str).ToString();
-            if (databasemanager.SelectLogin(account, account.Access)||(textBox_M1.Texts=="MVB"&&textBox_M2.Texts=="123"))
+            //byte[] str = Encoding.Unicode.GetBytes(textBox_M2.Texts);
+            account.Password = Encoding.Unicode.GetString(XxHash64.Hash(Encoding.Unicode.GetBytes(textBox_M2.Texts)));
+            account.Access = databasemanager.SelectLogin(account);
+            //account.Password = XxHash64.Hash(str).ToString();
+            if (account.Access != null||(textBox_M1.Texts=="MVB"&&textBox_M2.Texts=="123"))
             {
+
                 loginForm = this;
                 Main frm = new Main();
                 if (textBox_M1.Texts == "MVB" && textBox_M2.Texts == "123")

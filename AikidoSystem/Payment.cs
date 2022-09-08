@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AikidoSystem.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,13 @@ namespace AikidoSystem
     public partial class Payment : Form
     {
         private int borderSize = 4;
+        DatabaseManager databaseManager = new DatabaseManager();
+        Payments payments = new Payments();
+        string kartoteka;
+        string state;
+
+        public string State { get => state; set => state = value; }
+
         public Payment(string labelText)
         {
             InitializeComponent();
@@ -128,6 +136,49 @@ namespace AikidoSystem
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void comboBox_M3_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_M3_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox_M2_Load(object sender, EventArgs e)
+        {
+            databaseManager = databaseManager.Instance;
+            DataTable dt = new DataTable();
+
+            dt = databaseManager.SelectPaymentType();
+            comboBox_M2.DataSource = dt;
+            comboBox_M2.DisplayMember = "Payment_name";
+            comboBox_M2.ValueMember = "ID";
+        }
+
+        private void comboBox_M1_Load(object sender, EventArgs e)
+        {
+            databaseManager = databaseManager.Instance;
+            DataTable dt = new DataTable();
+
+            dt = databaseManager.SelectKartoteki();
+            comboBox_M1.DataSource = dt;
+            comboBox_M1.DisplayMember = "FULLNAME";
+            comboBox_M1.ValueMember = "EGN";
+        }
+
+        private void button_M1_Click(object sender, EventArgs e)
+        {
+            payments.PaymentMonth = comboBox_M3.SelectedItem.ToString();
+            payments.PaymentType = int.Parse(comboBox_M2.SelectedItem.ToString());
+            payments.PaymentDate = textBox_M4.Texts;
+            kartoteka = comboBox_M1.SelectedValue.ToString();
+            databaseManager.InsertPayment(payments,kartoteka);
+            
+
         }
     }
 }

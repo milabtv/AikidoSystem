@@ -52,5 +52,13 @@ namespace AikidoSystem
             SeminarDetails seminar = new SeminarDetails("Въвеждане на Семинар");
             seminar.Show();
         }
+
+        private void Seminars_UserControl_Load(object sender, EventArgs e)
+        {
+            DatabaseManager database = new DatabaseManager();
+            database = database.Instance;
+
+            DataTable dt = database.SelectPart(textBox_M1.Texts);
+        }
     }
 }

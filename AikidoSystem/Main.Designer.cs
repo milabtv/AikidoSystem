@@ -33,13 +33,11 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnLevels = new FontAwesome.Sharp.IconButton();
             this.btnSeminars = new FontAwesome.Sharp.IconButton();
-            this.btnDocs = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.btnGroups = new FontAwesome.Sharp.IconButton();
             this.btnTimetable = new FontAwesome.Sharp.IconButton();
             this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.btnKartoteka = new FontAwesome.Sharp.IconButton();
-            this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar = new System.Windows.Forms.Panel();
@@ -62,13 +60,11 @@
             this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.btnLevels);
             this.panelMenu.Controls.Add(this.btnSeminars);
-            this.panelMenu.Controls.Add(this.btnDocs);
             this.panelMenu.Controls.Add(this.iconButton6);
             this.panelMenu.Controls.Add(this.btnGroups);
             this.panelMenu.Controls.Add(this.btnTimetable);
             this.panelMenu.Controls.Add(this.btnPayment);
             this.panelMenu.Controls.Add(this.btnKartoteka);
-            this.panelMenu.Controls.Add(this.btnHome);
             this.panelMenu.Controls.Add(this.panel1);
             resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
@@ -114,20 +110,6 @@
             this.btnSeminars.Tag = "Семинари";
             this.btnSeminars.UseVisualStyleBackColor = true;
             this.btnSeminars.Click += new System.EventHandler(this.btnSeminars_Click);
-            // 
-            // btnDocs
-            // 
-            resources.ApplyResources(this.btnDocs, "btnDocs");
-            this.btnDocs.FlatAppearance.BorderSize = 0;
-            this.btnDocs.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnDocs.IconChar = FontAwesome.Sharp.IconChar.Paperclip;
-            this.btnDocs.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.btnDocs.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDocs.IconSize = 40;
-            this.btnDocs.Name = "btnDocs";
-            this.btnDocs.Tag = "Документи";
-            this.btnDocs.UseVisualStyleBackColor = true;
-            this.btnDocs.Click += new System.EventHandler(this.btnDocs_Click);
             // 
             // iconButton6
             // 
@@ -197,21 +179,6 @@
             this.btnKartoteka.Tag = "Картотеки";
             this.btnKartoteka.UseVisualStyleBackColor = true;
             this.btnKartoteka.Click += new System.EventHandler(this.btnKartoteka_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.MidnightBlue;
-            resources.ApplyResources(this.btnHome, "btnHome");
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btnHome.IconColor = System.Drawing.Color.LightSteelBlue;
-            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.IconSize = 40;
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Tag = "Начало";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel1
             // 
@@ -329,7 +296,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelDesktop;
-        private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton iconButton6;
         private FontAwesome.Sharp.IconButton btnGroups;
         private FontAwesome.Sharp.IconButton btnTimetable;
@@ -341,7 +307,6 @@
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private FontAwesome.Sharp.IconButton btnDocs;
         private FontAwesome.Sharp.IconButton btnSeminars;
         private FontAwesome.Sharp.IconButton btnLevels;
         private FontAwesome.Sharp.IconButton iconButton1;

@@ -175,20 +175,7 @@ namespace AikidoSystem
             LoginForm.loginForm.ShowDialog();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            if (!panelDesktop.Controls.Contains(Home_UserControl.Instance))
-            {
-                panelDesktop.Controls.Add(Home_UserControl.Instance);
-                Home_UserControl.Instance.Dock = DockStyle.Fill;
-            }
-
-            Home_UserControl.Instance.BringToFront();
-            Home_UserControl.Instance.Focus();
-            menuChange(btnHome);
-            btnHome.BackColor = Color.RoyalBlue;
-        }
-
+       
         private void btnKartoteka_Click(object sender, EventArgs e)
         {
             if (!panelDesktop.Controls.Contains(Kartoteka_UserControl.Instance))
@@ -201,6 +188,7 @@ namespace AikidoSystem
             Kartoteka_UserControl.Instance.Focus();
             menuChange(btnKartoteka);
             btnKartoteka.BackColor = Color.RoyalBlue;
+            
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
@@ -246,21 +234,7 @@ namespace AikidoSystem
             
         }
 
-        private void btnDocs_Click(object sender, EventArgs e)
-        {
-            if (!panelDesktop.Controls.Contains(Documents_UserControl.Instance))
-            {
-                panelDesktop.Controls.Add(Documents_UserControl.Instance);
-                Documents_UserControl.Instance.Dock = DockStyle.Fill;
-            }
-
-            Documents_UserControl.Instance.BringToFront();
-            Documents_UserControl.Instance.Focus();
-            menuChange(btnDocs);
-            btnDocs.BackColor = Color.RoyalBlue;
-            
-
-        }
+        
         private void btnSeminars_Click(object sender, EventArgs e)
         {
             if (!panelDesktop.Controls.Contains(Seminars_UserControl.Instance))

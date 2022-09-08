@@ -21,11 +21,11 @@ namespace AikidoSystem.UI
         private Color listTextColor = Color.DimGray;
         private Color borderColor = Color.MediumSlateBlue;
         private int borderSize = 1;
-
+        
         private ComboBox cmbList;
         private Label lblText;
         private Button btnIcon;
-
+        
         public new Color BackColor
         {
             get => backColor;
@@ -34,6 +34,7 @@ namespace AikidoSystem.UI
                 backColor = value;
                 lblText.BackColor = backColor;
                 btnIcon.BackColor = backColor;
+               
             }
         }
         public Color IconColor
@@ -183,11 +184,60 @@ namespace AikidoSystem.UI
             set =>cmbList.SelectedIndex = value;
         }
 
+        [DefaultValue("")]
+        [TypeConverter("System.Windows.Forms.Design.DataMemberFieldConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+        [Editor("System.Windows.Forms.Design.DataMemberFieldEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]        
+        public string DisplayMember
+        {
+            get
+            {
+                return cmbList.DisplayMember;
+            }
+            set
+            {
+                cmbList.DisplayMember = value;
+                
+            }
+        }
+        
+        [DefaultValue("")]
+        [Editor("System.Windows.Forms.Design.DataMemberFieldEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]        
+        public string ValueMember
+        {
+            get
+            {
+                return cmbList.ValueMember;
+            }
+            set
+            {
+                cmbList.ValueMember = value;
+                
+            }
+        }
+    
+        [DefaultValue(null)]
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]     
+        [Bindable(true)]
+        public object SelectedValue
+        {
+            get
+            {
+                return cmbList.SelectedValue;
+            }
+            set
+            {
+                cmbList.SelectedValue = value;
+            }
+        }
         public event EventHandler OnSelectedIndexChanged;
+
+        
 
         public ComboBox_M()
         {
-            cmbList = new ComboBox();
+
+            cmbList = new ComboBox();            
             lblText = new Label();
             btnIcon = new Button();
             this.SuspendLayout();
@@ -279,6 +329,11 @@ namespace AikidoSystem.UI
             lblText.Text = cmbList.Text;    
         }
 
-        
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            AdjustComboBoxDimentions();
+        }
+
     }
 }

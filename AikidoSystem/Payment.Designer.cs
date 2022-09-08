@@ -39,6 +39,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox_M3 = new AikidoSystem.UI.ComboBox_M();
+            this.comboBox_M2 = new AikidoSystem.UI.ComboBox_M();
+            this.comboBox_M1 = new AikidoSystem.UI.ComboBox_M();
             this.textBox_M4 = new AikidoSystem.UI.TextBox_M();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox_M14 = new AikidoSystem.UI.TextBox_M();
@@ -57,9 +60,6 @@
             this.textBox_M8 = new AikidoSystem.UI.TextBox_M();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox_M1 = new AikidoSystem.UI.ComboBox_M();
-            this.comboBox_M2 = new AikidoSystem.UI.ComboBox_M();
-            this.comboBox_M3 = new AikidoSystem.UI.ComboBox_M();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,7 +97,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(102, 254);
+            this.label4.Location = new System.Drawing.Point(50, 254);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 25);
             this.label4.TabIndex = 29;
@@ -108,7 +108,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(102, 191);
+            this.label3.Location = new System.Drawing.Point(50, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 25);
             this.label3.TabIndex = 27;
@@ -119,7 +119,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(102, 127);
+            this.label2.Location = new System.Drawing.Point(50, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 25);
             this.label2.TabIndex = 25;
@@ -130,7 +130,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Unicode MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(102, 61);
+            this.label1.Location = new System.Drawing.Point(50, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 25);
             this.label1.TabIndex = 23;
@@ -229,6 +229,81 @@
             this.panel2.Size = new System.Drawing.Size(465, 416);
             this.panel2.TabIndex = 3;
             // 
+            // comboBox_M3
+            // 
+            this.comboBox_M3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
+            this.comboBox_M3.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_M3.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.comboBox_M3.BorderSize = 2;
+            this.comboBox_M3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_M3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_M3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M3.IconColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M3.Items.AddRange(new object[] {
+            "Януари",
+            "Февруари",
+            "Март",
+            "Април",
+            "Май",
+            "Юни",
+            "Юли",
+            "Август",
+            "Септември",
+            "Октомви",
+            "Ноември",
+            "Декември"});
+            this.comboBox_M3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBox_M3.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox_M3.Location = new System.Drawing.Point(55, 219);
+            this.comboBox_M3.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox_M3.Name = "comboBox_M3";
+            this.comboBox_M3.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBox_M3.Size = new System.Drawing.Size(335, 30);
+            this.comboBox_M3.TabIndex = 38;
+            this.comboBox_M3.Texts = "";
+            this.comboBox_M3.OnSelectedIndexChanged += new System.EventHandler(this.comboBox_M3_OnSelectedIndexChanged);
+            this.comboBox_M3.Load += new System.EventHandler(this.comboBox_M3_Load);
+            // 
+            // comboBox_M2
+            // 
+            this.comboBox_M2.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_M2.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.comboBox_M2.BorderSize = 2;
+            this.comboBox_M2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboBox_M2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_M2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M2.IconColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBox_M2.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox_M2.Location = new System.Drawing.Point(55, 155);
+            this.comboBox_M2.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox_M2.Name = "comboBox_M2";
+            this.comboBox_M2.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBox_M2.Size = new System.Drawing.Size(335, 30);
+            this.comboBox_M2.TabIndex = 37;
+            this.comboBox_M2.Texts = "";
+            this.comboBox_M2.Load += new System.EventHandler(this.comboBox_M2_Load);
+            // 
+            // comboBox_M1
+            // 
+            this.comboBox_M1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox_M1.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.comboBox_M1.BorderSize = 2;
+            this.comboBox_M1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_M1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_M1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M1.IconColor = System.Drawing.Color.MidnightBlue;
+            this.comboBox_M1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.comboBox_M1.ListTextColor = System.Drawing.Color.DimGray;
+            this.comboBox_M1.Location = new System.Drawing.Point(55, 89);
+            this.comboBox_M1.MinimumSize = new System.Drawing.Size(200, 30);
+            this.comboBox_M1.Name = "comboBox_M1";
+            this.comboBox_M1.Padding = new System.Windows.Forms.Padding(2);
+            this.comboBox_M1.Size = new System.Drawing.Size(335, 30);
+            this.comboBox_M1.TabIndex = 2;
+            this.comboBox_M1.Texts = "";
+            this.comboBox_M1.Load += new System.EventHandler(this.comboBox_M1_Load);
+            // 
             // textBox_M4
             // 
             this.textBox_M4.BackColor = System.Drawing.SystemColors.Window;
@@ -238,14 +313,14 @@
             this.textBox_M4.BorderSize = 5;
             this.textBox_M4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_M4.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox_M4.Location = new System.Drawing.Point(107, 282);
+            this.textBox_M4.Location = new System.Drawing.Point(56, 282);
             this.textBox_M4.Multiline = false;
             this.textBox_M4.Name = "textBox_M4";
             this.textBox_M4.Padding = new System.Windows.Forms.Padding(7);
             this.textBox_M4.PasswordChar = false;
             this.textBox_M4.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBox_M4.PlaceholderText = "";
-            this.textBox_M4.Size = new System.Drawing.Size(250, 31);
+            this.textBox_M4.Size = new System.Drawing.Size(332, 31);
             this.textBox_M4.TabIndex = 28;
             this.textBox_M4.Texts = "";
             this.textBox_M4.UnderlinedStyle = true;
@@ -471,6 +546,7 @@
             this.button_M1.Text = "Въведи";
             this.button_M1.TextColor = System.Drawing.Color.Lavender;
             this.button_M1.UseVisualStyleBackColor = false;
+            this.button_M1.Click += new System.EventHandler(this.button_M1_Click);
             // 
             // textBox_M8
             // 
@@ -515,60 +591,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(357, 86);
             this.panel3.TabIndex = 1;
-            // 
-            // comboBox_M1
-            // 
-            this.comboBox_M1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox_M1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.comboBox_M1.BorderSize = 2;
-            this.comboBox_M1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBox_M1.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox_M1.IconColor = System.Drawing.Color.MidnightBlue;
-            this.comboBox_M1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBox_M1.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox_M1.Location = new System.Drawing.Point(107, 89);
-            this.comboBox_M1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBox_M1.Name = "comboBox_M1";
-            this.comboBox_M1.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBox_M1.Size = new System.Drawing.Size(253, 30);
-            this.comboBox_M1.TabIndex = 2;
-            this.comboBox_M1.Texts = "";
-            // 
-            // comboBox_M2
-            // 
-            this.comboBox_M2.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox_M2.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.comboBox_M2.BorderSize = 2;
-            this.comboBox_M2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBox_M2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox_M2.IconColor = System.Drawing.Color.MidnightBlue;
-            this.comboBox_M2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBox_M2.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox_M2.Location = new System.Drawing.Point(107, 155);
-            this.comboBox_M2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBox_M2.Name = "comboBox_M2";
-            this.comboBox_M2.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBox_M2.Size = new System.Drawing.Size(253, 30);
-            this.comboBox_M2.TabIndex = 37;
-            this.comboBox_M2.Texts = "";
-            // 
-            // comboBox_M3
-            // 
-            this.comboBox_M3.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox_M3.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.comboBox_M3.BorderSize = 2;
-            this.comboBox_M3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.comboBox_M3.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox_M3.IconColor = System.Drawing.Color.MidnightBlue;
-            this.comboBox_M3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.comboBox_M3.ListTextColor = System.Drawing.Color.DimGray;
-            this.comboBox_M3.Location = new System.Drawing.Point(107, 219);
-            this.comboBox_M3.MinimumSize = new System.Drawing.Size(200, 30);
-            this.comboBox_M3.Name = "comboBox_M3";
-            this.comboBox_M3.Padding = new System.Windows.Forms.Padding(2);
-            this.comboBox_M3.Size = new System.Drawing.Size(253, 30);
-            this.comboBox_M3.TabIndex = 38;
-            this.comboBox_M3.Texts = "";
             // 
             // Payment
             // 
